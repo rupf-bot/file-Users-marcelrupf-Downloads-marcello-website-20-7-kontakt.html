@@ -7,11 +7,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Mono:wght@0,400;0,700&display=swap" rel="stylesheet">
   <title>Marcel Rupf – Transformations Manager & Produktentwickler</title>
+  <meta name="description" content="Marcel Rupf – Transformations Manager und Produktentwickler aus Zürich. Strategie, digitale Transformation und Produktentwicklung.">
+  <meta property="og:title" content="Marcel Rupf – Transformations Manager & Produktentwickler">
+  <meta property="og:description" content="Strategie, digitale Transformation und Produktentwicklung aus Zürich.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_CH">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --anthropic-serif: "Instrument Sans", sans-serif;
+      --heading-font: "Instrument Sans", sans-serif;
       --accent: #B78AFF;
       --accent-dark: #9b6ef5;
       --bg: #0d0d0f;
@@ -24,7 +29,7 @@
     html { font-size: 18px; scroll-behavior: smooth; }
 
     h1, h2, h3 {
-      font-family: var(--anthropic-serif), Georgia, serif;
+      font-family: var(--heading-font), Georgia, serif;
       font-weight: 400;
     }
 
@@ -195,7 +200,7 @@
 
     /* ── Landing text elements ── */
     .landing-title {
-      font-family: var(--anthropic-serif), Georgia, serif;
+      font-family: var(--heading-font), Georgia, serif;
       font-size: clamp(2.4rem, 4vw, 5rem);
       font-weight: 400;
       letter-spacing: -.02em;
@@ -293,7 +298,7 @@
 
     /* ── Footer ── */
     footer { background: #0d0d0f; padding: 5rem 2.6rem 2.5rem; border-top: 1px solid rgba(255,255,255,0.06); position: relative; overflow: visible; }
-    .footer-wordmark { font-family:var(--anthropic-serif),Georgia,serif; font-size:clamp(3rem,9vw,10rem); font-weight:400; letter-spacing:-.02em; color:#fff; line-height:.9; margin-bottom:4rem; white-space:nowrap; overflow:visible; }
+    .footer-wordmark { font-family:var(--heading-font),Georgia,serif; font-size:clamp(3rem,9vw,10rem); font-weight:400; letter-spacing:-.02em; color:#fff; line-height:.9; margin-bottom:4rem; white-space:nowrap; overflow:visible; }
     .footer-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.08); }
     .footer-col-label { font-family:'Space Mono',monospace;font-size:.6rem;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.8rem; }
     .footer-col a, .footer-col span { display:block;color:#fff;font-size:.85rem;font-weight:500;line-height:2;transition:color .25s; }
@@ -544,7 +549,7 @@
     <div class="footer-grid">
       <div class="footer-col"><div class="footer-col-label">Rechtliches</div><a href="impressum.html">Impressum & Datenschutz</a></div>
       <div class="footer-col"><div class="footer-col-label">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">LinkedIn</a></div>
-      <div class="footer-col"><div class="footer-col-label">Kontakt</div><a href="/cdn-cgi/l/email-protection#6f070a0303002f020e1d0c0a031d1a1f09410c0002"><span class="__cf_email__" data-cfemail="9af2fff6f6f5daf7fbe8f9fff6e8efeafcb4f9f5f7">[email&#160;protected]</span></a></div>
+      <div class="footer-col"><div class="footer-col-label">Kontakt</div><a href="mailto:hello@marcelrupf.com">hello@marcelrupf.com</a></div>
       <div class="footer-col"><span style="color:rgba(255,255,255,0.3)">©2026 Marcel Rupf</span></div>
     </div>
     <div class="footer-bottom">
@@ -557,7 +562,7 @@
     <svg viewBox="0 0 16 16"><line x1="8" y1="13" x2="8" y2="3"/><polyline points="4,7 8,3 12,7"/></svg>
   </a>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Live time
     function updateTime() {
       const el = document.getElementById('live-time');
