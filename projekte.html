@@ -451,7 +451,7 @@
   <div id="cursor"></div>
   <div class="progress-bar" id="progress"></div>
       <nav class="site-nav" id="navbar">
-    <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Transformation &amp; Produktentwicklung</span></div>
+    <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
     <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links"><li><a href="projekte.html" class="active">Projekte</a></li><li><a href="ansatz.html">Über mich</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
   </nav>
@@ -759,12 +759,13 @@
       <div class="footer-col"><span style="color:rgba(255,255,255,0.35)">©2026 Marcel Rupf</span></div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">Transformations Manager & Produktentwickler · Zürich</span>
+      <span class="footer-copy">Experience & AI Strategy Leader · Zürich · <span id="footer-time" style="font-variant-numeric:tabular-nums;">--:--</span></span>
       <span class="footer-tag">Verfügbar für neue Projekte</span>
     </div>
   </footer>
   <a class="back-top" id="backTop" href="#" aria-label="Nach oben"><svg viewBox="0 0 16 16"><line x1="8" y1="13" x2="8" y2="3"/><polyline points="4,7 8,3 12,7"/></svg></a>
   <script>
+    (function(){var ft=document.getElementById('footer-time');function u(){if(ft)ft.textContent=new Date().toLocaleTimeString('de-CH',{timeZone:'Europe/Zurich',hour:'2-digit',minute:'2-digit'});}u();setInterval(u,60000);})();
 
     const navbar=document.getElementById('navbar');
     let lastScroll=0;
