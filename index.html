@@ -177,17 +177,17 @@
       inset: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(ellipse 60% 50% at center, rgba(183,138,255,0.65) 0%, transparent 70%);
-      animation: glowMove 12s linear infinite;
+      background: radial-gradient(ellipse 35% 25% at center, rgba(183,138,255,0.7) 0%, transparent 100%);
+      animation: glowOrbit 12s linear infinite;
       z-index: 1;
       pointer-events: none;
     }
-    @keyframes glowMove {
-      0%   { transform: translate(10%, 0%); }
-      25%  { transform: translate(30%, -25%); }
-      50%  { transform: translate(5%, 25%); }
-      75%  { transform: translate(-20%, -10%); }
-      100% { transform: translate(10%, 0%); }
+    @keyframes glowOrbit {
+      0%   { transform: translate(-25%, 0%); }
+      25%  { transform: translate(0%, -25%); }
+      50%  { transform: translate(25%, 0%); }
+      75%  { transform: translate(0%, 25%); }
+      100% { transform: translate(-25%, 0%); }
     }
     .landing-right img {
       position: absolute;
