@@ -51,8 +51,17 @@
       z-index: 300; width: 0%; transition: width .1s linear;
     }
 
+    /* ── Language Toggle ── */
+    .nav-right{display:flex;align-items:center;gap:2rem;}
+    .lang-toggle{background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.06em;padding:0;line-height:1;color:inherit;display:flex;align-items:center;gap:.2rem;}
+    .lang-de-lbl,.lang-en-lbl{opacity:.35;transition:opacity .2s;}
+    .lang-sep-lbl{opacity:.15;}
+    body.lang-en .lang-en-lbl{opacity:1;}
+    body:not(.lang-en) .lang-de-lbl{opacity:1;}
+    @media(max-width:768px){.nav-right{position:relative;z-index:500;margin-left:auto;}.site-nav.menu-open .lang-toggle{color:#fff;}.nav-hamburger.open~.lang-toggle,.lang-toggle{color:inherit;}}
+
     /* ── Navbar ── */
-        .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;justify-content:space-between;background:#0d0d0f;border-bottom:1px solid rgba(255,255,255,0.06);transition:transform .45s cubic-bezier(0.16,1,0.3,1),background .3s,border-color .3s;}
+        .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;background:#0d0d0f;border-bottom:1px solid rgba(255,255,255,0.06);transition:transform .45s cubic-bezier(0.16,1,0.3,1),background .3s,border-color .3s;}
     .site-nav.hidden{transform:translateY(-100%);}
     .site-nav.scrolled{background:rgba(13,13,15,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.08);}
     .nav-logo{font-weight:600;font-size:1.22rem;color:#fff;letter-spacing:-.01em;transition:color .25s;}
@@ -419,7 +428,6 @@
       .nav-links a.active { color: var(--accent) !important; }
 
       /* Hamburger: position:fixed, eigener Stacking Context über Overlay */
-      .nav-right { margin-left: auto; }
       .nav-hamburger {
         display: flex;
         position: relative;
@@ -454,20 +462,23 @@
 
       <nav class="site-nav" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links"><li><a href="projekte.html">Projekte</a></li><li><a href="ansatz.html">Über mich</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+    <div class="nav-right">
+      <ul class="nav-links"><li><a href="projekte.html"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln"><span class="lang-de-lbl">DE</span><span class="lang-sep-lbl"> · </span><span class="lang-en-lbl">EN</span></button>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </nav>
 
   <!-- ── LANDING ── -->
   <section class="landing">
 
     <div class="landing-left">
-      <h1 class="landing-title">Digitalen Wandel gestalten. Strategisch denken, operativ umsetzen.</h1>
-      <p class="landing-bio">Transformations Manager, AI-Stratege und UX-Spezialist. Ich begleite Organisationen dabei, Technologie konsequent von Nutzerbedürfnissen her zu denken — vom ersten Konzept bis zur messbaren Wirkung.</p>
+      <h1 class="landing-title" data-en="Shaping digital change. Strategic thinking, operational delivery.">Digitalen Wandel gestalten. Strategisch denken, operativ umsetzen.</h1>
+      <p class="landing-bio" data-en="Transformation Manager, AI strategist and UX specialist. I help organisations think about technology consistently from user needs — from the first concept to measurable impact.">Transformations Manager, AI-Stratege und UX-Spezialist. Ich begleite Organisationen dabei, Technologie konsequent von Nutzerbedürfnissen her zu denken — vom ersten Konzept bis zur messbaren Wirkung.</p>
       <div class="landing-tags">
         <span class="landing-tag">Transformation</span>
-        <span class="landing-tag">Digitalisierung</span>
-        <span class="landing-tag">Produktentwicklung</span>
+        <span class="landing-tag" data-en="Digitalisation">Digitalisierung</span>
+        <span class="landing-tag" data-en="Product Development">Produktentwicklung</span>
         <span class="landing-tag">GenAI</span>
         <span class="landing-tag">Change Management</span>
         <span class="landing-tag">Governance</span>
@@ -489,7 +500,7 @@
     <div class="landing-right">
       <img loading="lazy" src="img/index/image-01.webp" alt="Marcel Rupf" />
     <div class="scroll-hint">
-        Scrollen
+        <span data-en="Scroll">Scrollen</span>
         <svg viewBox="0 0 14 14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="2" x2="7" y2="12"/><polyline points="4,9 7,12 10,9"/></svg>
       </div>
     </div>
@@ -501,8 +512,8 @@
   <!-- ── TEASER CARDS ── -->
   <section class="teaser-section">
     <div class="reveal">
-      <p class="section-label">Entdecken</p>
-      <h2 class="section-title">Was mich ausmacht</h2>
+      <p class="section-label" data-en="Explore">Entdecken</p>
+      <h2 class="section-title" data-en="What defines me">Was mich ausmacht</h2>
     </div>
     <div class="teaser-grid">
       <a href="projekte.html" class="teaser-card reveal delay-1">
