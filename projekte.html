@@ -23,7 +23,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --heading-font:"Instrument Sans",sans-serif;--accent:#737FDF;--accent-dark:#5B6CD1;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1); }
 
-    html { font-size:18px; scroll-behavior:smooth; }
+    html { font-size:18px; scroll-behavior:smooth; overflow-x:hidden; }
 
     h1,h2,h3{font-family:var(--heading-font),Georgia,serif;font-weight:400;}
     body { background:var(--bg);color:var(--dark);font-family:'Instrument Sans',sans-serif;font-weight:500;-webkit-font-smoothing:antialiased;overflow-x:hidden; }
@@ -822,9 +822,11 @@
         host.appendChild(cvs);
         var ctx=cvs.getContext('2d'),pts=[],raf=null;
         function size(){
-          var r=host.getBoundingClientRect();
-          cvs.width=Math.max(r.width*8,400);cvs.height=Math.max(r.height*8,400);
-          cvs.style.width=cvs.width+'px';cvs.style.height=cvs.height+'px';cvs.style.overflow='visible';
+          var dpr=window.devicePixelRatio||1;
+          cvs.width=window.innerWidth*dpr;cvs.height=window.innerHeight*dpr;
+          cvs.style.position='fixed';cvs.style.top='0';cvs.style.left='0';
+          cvs.style.width=window.innerWidth+'px';cvs.style.height=window.innerHeight+'px';
+          cvs.style.transform='none';
         }
         function Pt(cx,cy){
           var a=Math.random()*Math.PI*2,s=1+Math.random()*3;
