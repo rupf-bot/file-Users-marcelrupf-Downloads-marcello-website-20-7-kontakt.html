@@ -24,9 +24,10 @@
     .progress-bar { position:fixed;top:0;left:0;height:2px;background:var(--accent);z-index:300;width:0%;transition:width .1s linear; }
     /* ── Language Toggle ── */
     .nav-right{display:flex;align-items:center;gap:2rem;margin-left:auto;}
-    .lang-toggle{background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.06em;padding:0;line-height:1;color:inherit;display:flex;align-items:center;gap:.2rem;}
-    .lang-de-lbl,.lang-en-lbl{opacity:.35;transition:opacity .2s;}
-    .lang-sep-lbl{opacity:.15;}
+    .lang-toggle{background:none;border:1px solid currentColor;border-radius:100px;cursor:pointer;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.07em;text-transform:uppercase;padding:.26rem .65rem;color:inherit;display:flex;align-items:center;gap:.3rem;white-space:nowrap;opacity:.5;transition:opacity .25s;}
+    .lang-toggle:hover{opacity:.85;}
+    .lang-de-lbl,.lang-en-lbl{opacity:.45;transition:opacity .2s;}
+    .lang-sep-lbl{opacity:.25;}
     body.lang-en .lang-en-lbl{opacity:1;}
     body:not(.lang-en) .lang-de-lbl{opacity:1;}
     @media(max-width:768px){.nav-right{position:relative;z-index:500;margin-left:auto;}.site-nav.menu-open .lang-toggle{color:#fff;}.nav-hamburger.open~.lang-toggle,.lang-toggle{color:inherit;}}
@@ -576,9 +577,9 @@
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 03</div>
             <h2 class="proj-detail-title">Swisscom –<br>Redesign B2B Website in SAFe</h2>
-            <p class="proj-detail-lead">Als massgeblicher UX-Treiber im B2B-Bereich der Swisscom — Konzeption und Umsetzung eines umfassenden Redesigns, Einführung agiler SAFe-Methoden sowie aktive Mitgestaltung der Zusammenführung zweier Projektteams.</p>
+            <p class="proj-detail-lead" data-en="As a key UX driver in Swisscom's B2B area — conception and implementation of a comprehensive redesign, introduction of agile SAFe methods, and active involvement in merging two project teams.">Als massgeblicher UX-Treiber im B2B-Bereich der Swisscom — Konzeption und Umsetzung eines umfassenden Redesigns, Einführung agiler SAFe-Methoden sowie aktive Mitgestaltung der Zusammenführung zweier Projektteams.</p>
             <div class="proj-detail-body">
-              <p>Als Stream Lead UX Designer im B2B bei Swisscom war ich über dreieinhalb Jahre fachlich verantwortlich für die nutzerzentrierte Konzeption und Umsetzung zentraler digitaler Produkte und Services. Als Teil des Kernteams — gemeinsam mit Product Owner und Projektmanager — trug ich massgeblich dazu bei, zwei bisher getrennt arbeitende Projektteams erfolgreich zusammenzuführen und Designprozesse zu vereinheitlichen. Parallel dazu begleitete ich die Einführung agiler Arbeitsmethoden nach SAFe und half, eine gemeinsame UX-Vision im Team zu verankern.</p>
+              <p data-en="As Stream Lead UX Designer in B2B at Swisscom, I was professionally responsible for user-centred conception and delivery of core digital products and services for three and a half years. As part of the core team — together with the product owner and project manager — I contributed significantly to successfully merging two previously separate project teams and unifying design processes. In parallel, I accompanied the introduction of agile working methods according to SAFe and helped anchor a shared UX vision in the team.">Als Stream Lead UX Designer im B2B bei Swisscom war ich über dreieinhalb Jahre fachlich verantwortlich für die nutzerzentrierte Konzeption und Umsetzung zentraler digitaler Produkte und Services. Als Teil des Kernteams — gemeinsam mit Product Owner und Projektmanager — trug ich massgeblich dazu bei, zwei bisher getrennt arbeitende Projektteams erfolgreich zusammenzuführen und Designprozesse zu vereinheitlichen. Parallel dazu begleitete ich die Einführung agiler Arbeitsmethoden nach SAFe und half, eine gemeinsame UX-Vision im Team zu verankern.</p>
             </div>
             <div class="proj-detail-tags">
               <span class="proj-tag">Swisscom AG</span>
@@ -587,7 +588,7 @@
               <span class="proj-tag">Redesign</span>
               <span class="proj-tag">SAFe</span>
               <span class="proj-tag">Agile</span>
-              <span class="proj-tag">Teamintegration</span>
+              <span class="proj-tag" data-en="Team integration">Teamintegration</span>
               <span class="proj-tag">Team-Coaching</span>
               <span class="proj-tag">2015–2019</span>
             </div>
@@ -612,9 +613,9 @@
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 04</div>
             <h2 class="proj-detail-title">Post CH AG –<br>Usability &amp; Expert Review</h2>
-            <p class="proj-detail-lead">Expert Review der Pick@home App sowie Konzept und Usability Testing des digitalen Versandassistenten.</p>
+            <p class="proj-detail-lead" data-en="Expert review of the Pick@home app as well as concept and usability testing of the digital shipping assistant.">Expert Review der Pick@home App sowie Konzept und Usability Testing des digitalen Versandassistenten.</p>
             <div class="proj-detail-body">
-              <p>Analyse der bestehenden App nach ISO-Heuristiken (Norman/Nielsen), Ableitung konkreter Handlungsempfehlungen und Beratung von Stakeholdern und Projektleitung. In einem zweiten Projekt: Visualisierung von Design-Thinking-Ergebnissen als Axure-Prototyp, Durchführung von Usability Tests als Moderator sowie Storyboardentwicklung und Wordcafé-Workshops.</p>
+              <p data-en="Analysis of the existing app according to ISO heuristics (Norman/Nielsen), derivation of concrete recommendations and consulting for stakeholders and project management. In a second project: visualisation of design thinking results as an Axure prototype, conducting usability tests as moderator, as well as storyboard development and word café workshops.">Analyse der bestehenden App nach ISO-Heuristiken (Norman/Nielsen), Ableitung konkreter Handlungsempfehlungen und Beratung von Stakeholdern und Projektleitung. In einem zweiten Projekt: Visualisierung von Design-Thinking-Ergebnissen als Axure-Prototyp, Durchführung von Usability Tests als Moderator sowie Storyboardentwicklung und Wordcafé-Workshops.</p>
             </div>
             <div class="proj-detail-tags">
               <span class="proj-tag">Post CH AG</span>
@@ -634,16 +635,16 @@
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 05</div>
             <h2 class="proj-detail-title">Stiftung myclimate –<br>Usability Testing</h2>
-            <p class="proj-detail-lead">Fachliche Gesamtverantwortung für das Usability-Testing der Website — von der Konzeption bis zur Massnahmenempfehlung.</p>
+            <p class="proj-detail-lead" data-en="Overall professional responsibility for usability testing of the website — from conception to recommended actions.">Fachliche Gesamtverantwortung für das Usability-Testing der Website — von der Konzeption bis zur Massnahmenempfehlung.</p>
             <div class="proj-detail-body">
-              <p>Entwicklung des Testleitfadens in enger Zusammenarbeit mit dem Kunden, Rekrutierung und Koordination von Testnutzern, Testleitung und Auswertung. Präsentation eines konkreten Massnahmenpakets mit priorisierten Verbesserungsempfehlungen an die Projektverantwortlichen.</p>
+              <p data-en="Development of the test guide in close collaboration with the client, recruitment and coordination of test users, test facilitation and evaluation. Presentation of a concrete package of measures with prioritised improvement recommendations to the project leads.">Entwicklung des Testleitfadens in enger Zusammenarbeit mit dem Kunden, Rekrutierung und Koordination von Testnutzern, Testleitung und Auswertung. Präsentation eines konkreten Massnahmenpakets mit priorisierten Verbesserungsempfehlungen an die Projektverantwortlichen.</p>
             </div>
             <div class="proj-detail-tags">
               <span class="proj-tag">myclimate</span>
               <span class="proj-tag">evux ag</span>
               <span class="proj-tag">Usability Testing</span>
-              <span class="proj-tag">Testleitung</span>
-              <span class="proj-tag">Handlungsempfehlungen</span>
+              <span class="proj-tag" data-en="Test facilitation">Testleitung</span>
+              <span class="proj-tag" data-en="Recommendations">Handlungsempfehlungen</span>
               <span class="proj-tag">2019</span>
             </div>
           </div>
@@ -668,16 +669,16 @@
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 06</div>
             <h2 class="proj-detail-title">St. Galler Kantonalbank –<br>Digitales Beratungstool</h2>
-            <p class="proj-detail-lead">Visionsentwicklung und regelmässiges Usability Testing für ein interaktives Beratungstool — von der Einzelnutzung zur kooperativen Nutzung im Kundengespräch.</p>
+            <p class="proj-detail-lead" data-en="Vision development and regular usability testing for an interactive advisory tool — from individual use to cooperative use in client consultations.">Visionsentwicklung und regelmässiges Usability Testing für ein interaktives Beratungstool — von der Einzelnutzung zur kooperativen Nutzung im Kundengespräch.</p>
             <div class="proj-detail-body">
-              <p>Aufbau speziell konstruierter Nutzertests im Berater-Kunden-Setting für die Anwendungsfälle Basisgespräch, Anlegen, Finanzieren und Vorsorgen. Erarbeitung der Produktvision als Prototyp sowie Aufbereitung und Präsentation der Ergebnisse auf Geschäftsleitungsebene.</p>
+              <p data-en="Development of specially constructed user tests in the advisor-client setting for the use cases basic conversation, investing, financing and pension planning. Development of the product vision as a prototype and presentation of results at management board level.">Aufbau speziell konstruierter Nutzertests im Berater-Kunden-Setting für die Anwendungsfälle Basisgespräch, Anlegen, Finanzieren und Vorsorgen. Erarbeitung der Produktvision als Prototyp sowie Aufbereitung und Präsentation der Ergebnisse auf Geschäftsleitungsebene.</p>
             </div>
             <div class="proj-detail-tags">
               <span class="proj-tag">SGKB</span>
               <span class="proj-tag">evux ag</span>
               <span class="proj-tag">Usability Testing</span>
-              <span class="proj-tag">Visionsprototyp</span>
-              <span class="proj-tag">Geschäftsleitung</span>
+              <span class="proj-tag" data-en="Vision prototype">Visionsprototyp</span>
+              <span class="proj-tag" data-en="Management board">Geschäftsleitung</span>
               <span class="proj-tag">2018</span>
             </div>
           </div>
@@ -689,16 +690,16 @@
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 07</div>
             <h2 class="proj-detail-title">DKSH –<br>Globaler Header &amp; Newsportal</h2>
-            <p class="proj-detail-lead">Nutzerzentrierte Beratung für die globale Website-Erneuerung — im Spannungsfeld fundamental unterschiedlicher Nutzerinteressen.</p>
+            <p class="proj-detail-lead" data-en="User-centred consulting for the global website renewal — navigating fundamentally different user interests.">Nutzerzentrierte Beratung für die globale Website-Erneuerung — im Spannungsfeld fundamental unterschiedlicher Nutzerinteressen.</p>
             <div class="proj-detail-body">
-              <p>Expert Review nach Nielsen/Norman als Ausgangspunkt, gefolgt von der Priorisierung von Anforderungen aus Nutzer- und Businessperspektive. Entwicklung einer Gesamtvision mit globalem Impact, Weiterentwicklung von Contact &amp; Locations sowie begleitendes Account Management.</p>
+              <p data-en="Expert review according to Nielsen/Norman as a starting point, followed by prioritisation of requirements from user and business perspectives. Development of an overall vision with global impact, further development of Contact &amp; Locations, and accompanying account management.">Expert Review nach Nielsen/Norman als Ausgangspunkt, gefolgt von der Priorisierung von Anforderungen aus Nutzer- und Businessperspektive. Entwicklung einer Gesamtvision mit globalem Impact, Weiterentwicklung von Contact &amp; Locations sowie begleitendes Account Management.</p>
             </div>
             <div class="proj-detail-tags">
               <span class="proj-tag">DKSH</span>
               <span class="proj-tag">evux ag</span>
               <span class="proj-tag">Expert Review</span>
-              <span class="proj-tag">UX-Beratung</span>
-              <span class="proj-tag">Anforderungsmanagement</span>
+              <span class="proj-tag" data-en="UX consulting">UX-Beratung</span>
+              <span class="proj-tag" data-en="Requirements management">Anforderungsmanagement</span>
               <span class="proj-tag">2018–2019</span>
             </div>
           </div>
@@ -721,16 +722,16 @@
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 08</div>
             <h2 class="proj-detail-title">SVGW –<br>Digitale Neuausrichtung</h2>
-            <p class="proj-detail-lead">Vollständiger Neuaufbau der digitalen Welt des Schweizerischen Verbands der Gas- und Wasserwirtschaft.</p>
+            <p class="proj-detail-lead" data-en="Complete rebuild of the digital world of the Swiss Gas and Water Industry Association.">Vollständiger Neuaufbau der digitalen Welt des Schweizerischen Verbands der Gas- und Wasserwirtschaft.</p>
             <div class="proj-detail-body">
-              <p>Von Visionsworkshop und Persona-Entwicklung über das Grobkonzept bis zum nutzertesteten Prototyp — Leitplanken für die Implementierung an Geschäftsleitung präsentiert.</p>
+              <p data-en="From vision workshop and persona development through the outline concept to a user-tested prototype — guidelines for implementation presented to the management board.">Von Visionsworkshop und Persona-Entwicklung über das Grobkonzept bis zum nutzertesteten Prototyp — Leitplanken für die Implementierung an Geschäftsleitung präsentiert.</p>
             </div>
             <div class="proj-detail-tags">
               <span class="proj-tag">SVGW</span>
               <span class="proj-tag">evux ag</span>
-              <span class="proj-tag">Strategie</span>
+              <span class="proj-tag" data-en="Strategy">Strategie</span>
               <span class="proj-tag">Personas</span>
-              <span class="proj-tag">Konzeption</span>
+              <span class="proj-tag" data-en="Conception">Konzeption</span>
               <span class="proj-tag">2018</span>
             </div>
           </div>
@@ -742,9 +743,9 @@
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 09</div>
             <h2 class="proj-detail-title">Weitere UX-Projekte</h2>
-            <p class="proj-detail-lead">UX-Konzeption, Prototyping und agile Projektbegleitung für Manpower, Lionstep, Revoca, Swisscom Health und Stiebel Eltron Schweiz.</p>
+            <p class="proj-detail-lead" data-en="UX conception, prototyping and agile project support for Manpower, Lionstep, Revoca, Swisscom Health and Stiebel Eltron Switzerland.">UX-Konzeption, Prototyping und agile Projektbegleitung für Manpower, Lionstep, Revoca, Swisscom Health und Stiebel Eltron Schweiz.</p>
             <div class="proj-detail-body">
-              <p>Suchfilter-Konzept für Manpower, MVP-Entwicklung für Lionstep, Screendesign für Revoca sowie mehrjährige Weiterentwicklung des elektronischen Patientendossiers Evita (Swisscom Health). Für Stiebel Eltron Schweiz: Beratung, Konzeption und Realisation einer interaktiven Touch-Installation für den Messeauftritt — Nutzerführung und Interaktionslogik für ein stationäres Touch-Terminal zur Produktpräsentation am Point of Interest.</p>
+              <p data-en="Search filter concept for Manpower, MVP development for Lionstep, screen design for Revoca, and multi-year further development of the electronic patient record Evita (Swisscom Health). For Stiebel Eltron Switzerland: consulting, conception and realisation of an interactive touch installation for the trade fair presence — user guidance and interaction logic for a stationary touch terminal for product presentation at the point of interest.">Suchfilter-Konzept für Manpower, MVP-Entwicklung für Lionstep, Screendesign für Revoca sowie mehrjährige Weiterentwicklung des elektronischen Patientendossiers Evita (Swisscom Health). Für Stiebel Eltron Schweiz: Beratung, Konzeption und Realisation einer interaktiven Touch-Installation für den Messeauftritt — Nutzerführung und Interaktionslogik für ein stationäres Touch-Terminal zur Produktpräsentation am Point of Interest.</p>
             </div>
             <div class="proj-detail-tags">
               <span class="proj-tag">Manpower</span>
@@ -752,8 +753,8 @@
               <span class="proj-tag">Revoca</span>
               <span class="proj-tag">Swisscom Health</span>
               <span class="proj-tag">Stiebel Eltron</span>
-              <span class="proj-tag">Touch-Installation</span>
-              <span class="proj-tag">Messe</span>
+              <span class="proj-tag" data-en="Touch installation">Touch-Installation</span>
+              <span class="proj-tag" data-en="Trade fair">Messe</span>
               <span class="proj-tag">2015–2018</span>
             </div>
           </div>
@@ -765,14 +766,14 @@
   <footer>
     <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcello</span></div></div>
     <div class="footer-grid">
-      <div class="footer-col"><div class="footer-col-label">Rechtliches</div><a href="impressum.html">Impressum & Datenschutz</a></div>
-      <div class="footer-col"><div class="footer-col-label">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">LinkedIn</a></div>
-      <div class="footer-col"><div class="footer-col-label">Kontakt</div><a href="mailto:hello@marcelrupf.com">hello@marcelrupf.com</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Legal">Rechtliches</div><a href="impressum.html" data-en="Legal Notice &amp; Privacy">Impressum &amp; Datenschutz</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Network">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">LinkedIn</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Contact">Kontakt</div><a href="mailto:hello@marcelrupf.com">hello@marcelrupf.com</a></div>
       <div class="footer-col"><div class="footer-col-label">&nbsp;</div><span style="color:rgba(255,255,255,0.35)">©2026 Marcel Rupf</span></div>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">Experience & AI Strategy Leader · Zürich · <span id="footer-time" style="font-variant-numeric:tabular-nums;">--:--</span></span>
-      <span class="footer-tag">Verfügbar für neue Projekte</span>
+      <span class="footer-tag" data-en="Available for new projects">Verfügbar für neue Projekte</span>
     </div>
   </footer>
   <a class="back-top" id="backTop" href="#" aria-label="Nach oben"><svg viewBox="0 0 16 16"><line x1="8" y1="13" x2="8" y2="3"/><polyline points="4,7 8,3 12,7"/></svg></a>
@@ -902,5 +903,24 @@
     });
   })();
   </script>
+<script>
+(function(){
+  var KEY='mr-lang',lang=localStorage.getItem(KEY)||'de';
+  function apply(l){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(!el.getAttribute('data-de'))el.setAttribute('data-de',el.textContent);
+      el.textContent=l==='en'?el.getAttribute('data-en'):el.getAttribute('data-de');
+    });
+    document.body.classList.toggle('lang-en',l==='en');
+    document.documentElement.lang=l;
+    localStorage.setItem(KEY,l);lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    apply(lang);
+    var btn=document.getElementById('langToggle');
+    if(btn)btn.addEventListener('click',function(){apply(lang==='de'?'en':'de');});
+  });
+})();
+</script>
 </body>
 </html>

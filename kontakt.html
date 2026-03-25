@@ -17,7 +17,17 @@
     :root{--heading-font:"Instrument Sans",sans-serif;--accent:#B78AFF;--accent-dark:#9b6ef5;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1);}
 
     html{font-size:18px;scroll-behavior:smooth;}
-        .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;justify-content:space-between;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s;}
+    /* ── Language Toggle ── */
+    .nav-right{display:flex;align-items:center;gap:2rem;margin-left:auto;}
+    .lang-toggle{background:none;border:1px solid currentColor;border-radius:100px;cursor:pointer;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.07em;text-transform:uppercase;padding:.26rem .65rem;color:inherit;display:flex;align-items:center;gap:.3rem;white-space:nowrap;opacity:.5;transition:opacity .25s;}
+    .lang-toggle:hover{opacity:.85;}
+    .lang-de-lbl,.lang-en-lbl{opacity:.45;transition:opacity .2s;}
+    .lang-sep-lbl{opacity:.25;}
+    body.lang-en .lang-en-lbl{opacity:1;}
+    body:not(.lang-en) .lang-de-lbl{opacity:1;}
+    @media(max-width:768px){.nav-right{position:relative;z-index:500;margin-left:auto;}.site-nav.menu-open .lang-toggle{color:#fff;}.nav-hamburger.open~.lang-toggle,.lang-toggle{color:inherit;}}
+
+        .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s;}
     .site-nav.scrolled{background:rgba(243,243,243,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,0.06);}
     .site-nav.hidden{transform:translateY(-100%);}
 
@@ -328,14 +338,17 @@
   <div class="progress-bar" id="progress"></div>
       <nav class="site-nav" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links"><li><a href="projekte.html">Projekte</a></li><li><a href="ansatz.html">Über mich</a></li><li><a href="kontakt.html" class="active">Kontakt</a></li></ul>
+    <div class="nav-right">
+      <ul class="nav-links"><li><a href="projekte.html"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html" class="active"><span data-en="Contact">Kontakt</span></a></li></ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln"><span class="lang-de-lbl">DE</span><span class="lang-sep-lbl"> · </span><span class="lang-en-lbl">EN</span></button>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </nav>
 
   <div class="page-hero">
-    <p class="page-eyebrow reveal">Kontakt</p>
-    <h1 class="page-title reveal delay-1">Interessiert an einem Austausch?</h1>
-    <p class="page-sub reveal delay-2">Ich freue mich auf ein <em>«Hallo»</em> von dir!</p>
+    <p class="page-eyebrow reveal" data-en="Contact">Kontakt</p>
+    <h1 class="page-title reveal delay-1" data-en="Interested in a conversation?">Interessiert an einem Austausch?</h1>
+    <p class="page-sub reveal delay-2" data-en="I look forward to hearing from you!" data-de="Ich freue mich auf ein «Hallo» von dir!">Ich freue mich auf ein <em>«Hallo»</em> von dir!</p>
   </div>
 
   <div class="kontakt-photos">
@@ -351,19 +364,19 @@
       <div class="reveal-left">
         <div class="contact-avail">
           <span class="avail-dot"></span>
-          <span class="avail-text">Verfügbar für neue Mandate</span>
+          <span class="avail-text" data-en="Available for new mandates">Verfügbar für neue Mandate</span>
         </div>
 
         <div class="contact-info-block">
-          <div class="contact-info-label">Standort</div>
+          <div class="contact-info-label" data-en="Location">Standort</div>
           <div class="contact-info-value">Zürich, Schweiz</div>
         </div>
         <div class="contact-info-block">
-          <div class="contact-info-label">E-Mail</div>
+          <div class="contact-info-label" data-en="Email">E-Mail</div>
           <div class="contact-info-value"><a href="mailto:hello@marcelrupf.com">hello@marcelrupf.com</a></div>
         </div>
         <div class="contact-info-block">
-          <div class="contact-info-label">Telefon</div>
+          <div class="contact-info-label" data-en="Phone">Telefon</div>
           <div class="contact-info-value"><a href="tel:+41792457871">+41 79 245 78 71</a></div>
         </div>
         <div class="contact-info-block">
@@ -371,36 +384,36 @@
           <div class="contact-info-value"><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">linkedin.com/in/marcelrupf</a></div>
         </div>
 
-        <p class="contact-promise">Schreib mir direkt — ich melde mich innert 24 Stunden und schaue, wie wir zusammenarbeiten können.</p>
+        <p class="contact-promise" data-en="Write to me directly — I'll get back to you within 24 hours and explore how we can work together.">Schreib mir direkt — ich melde mich innert 24 Stunden und schaue, wie wir zusammenarbeiten können.</p>
       </div>
 
       <div class="reveal">
         <div class="contact-actions">
           <a class="contact-btn btn-primary" href="mailto:hello@marcelrupf.com">
             <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="16" height="12" rx="1.5"/><polyline points="2,5 10,12 18,5"/></svg>
-            E-Mail schreiben
+            <span data-en="Send an email">E-Mail schreiben</span>
           </a>
           <a class="contact-btn btn-secondary" href="https://wa.me/41792457871" target="_blank">
             <svg viewBox="0 0 32 32" fill="currentColor" width="18" height="18"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.469 2.027 7.773L0 32l8.489-2.001A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.769-1.849l-.485-.289-5.037 1.187 1.225-4.898-.317-.503A13.267 13.267 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.878c-.398-.199-2.354-1.161-2.719-1.294-.365-.133-.631-.199-.897.199-.266.398-1.031 1.294-1.264 1.56-.233.266-.465.299-.863.1-.398-.2-1.681-.619-3.202-1.977-1.183-1.056-1.982-2.36-2.214-2.758-.232-.398-.025-.613.175-.811.18-.179.398-.465.598-.698.199-.232.265-.398.398-.664.133-.266.066-.498-.033-.698-.1-.199-.897-2.162-1.229-2.96-.324-.778-.653-.673-.897-.685l-.764-.013c-.266 0-.698.1-1.063.498-.365.398-1.395 1.362-1.395 3.322s1.428 3.853 1.627 4.119c.199.266 2.81 4.29 6.81 6.016.952.411 1.695.657 2.274.841.955.304 1.825.261 2.512.158.766-.114 2.354-.962 2.686-1.891.332-.93.332-1.727.232-1.891-.099-.166-.365-.265-.763-.464z"/></svg>
-            Via WhatsApp kontaktieren
+            <span data-en="Contact via WhatsApp">Via WhatsApp kontaktieren</span>
           </a>
           <a class="contact-btn btn-ghost" href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">
             <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.667 2H3.333A1.333 1.333 0 0 0 2 3.333v13.334A1.333 1.333 0 0 0 3.333 18h13.334A1.333 1.333 0 0 0 18 16.667V3.333A1.333 1.333 0 0 0 16.667 2zM7 15H5V8h2v7zm-1-8.25A1.25 1.25 0 1 1 7.25 5.5 1.25 1.25 0 0 1 6 6.75zM15 15h-2v-3.5c0-.83-.67-1.5-1.5-1.5S10 10.67 10 11.5V15H8V8h2v1.08A3 3 0 0 1 15 11.5V15z"/></svg>
-            Auf LinkedIn vernetzen
+            <span data-en="Connect on LinkedIn">Auf LinkedIn vernetzen</span>
           </a>
         </div>
 
         <div>
-          <p class="topics-label">Typische Anfragen</p>
+          <p class="topics-label" data-en="Typical requests">Typische Anfragen</p>
           <div class="topics-list">
             <span class="topic-chip">Transformation Management</span>
-            <span class="topic-chip">Digitalisierungsberatung</span>
+            <span class="topic-chip" data-en="Digitalisation consulting">Digitalisierungsberatung</span>
             <span class="topic-chip">Interim Leadership</span>
-            <span class="topic-chip">Vortrag & Workshop</span>
-            <span class="topic-chip">Produktentwicklung</span>
+            <span class="topic-chip" data-en="Talk &amp; Workshop">Vortrag &amp; Workshop</span>
+            <span class="topic-chip" data-en="Product Development">Produktentwicklung</span>
             <span class="topic-chip">Change Management</span>
             <span class="topic-chip">Governance</span>
-            <span class="topic-chip">Data & Analytics</span>
+            <span class="topic-chip">Data &amp; Analytics</span>
           </div>
         </div>
       </div>
@@ -412,14 +425,14 @@
   <footer>
     <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcello</span></div></div>
     <div class="footer-grid">
-      <div class="footer-col"><div class="footer-col-label">Rechtliches</div><a href="impressum.html">Impressum & Datenschutz</a></div>
-      <div class="footer-col"><div class="footer-col-label">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">LinkedIn</a></div>
-      <div class="footer-col"><div class="footer-col-label">Kontakt</div><a href="mailto:hello@marcelrupf.com">hello@marcelrupf.com</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Legal">Rechtliches</div><a href="impressum.html" data-en="Legal Notice &amp; Privacy">Impressum &amp; Datenschutz</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Network">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">LinkedIn</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Contact">Kontakt</div><a href="mailto:hello@marcelrupf.com">hello@marcelrupf.com</a></div>
       <div class="footer-col"><div class="footer-col-label">&nbsp;</div><span style="color:rgba(255,255,255,0.35)">©2026 Marcel Rupf</span></div>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">Experience & AI Strategy Leader · Zürich · <span id="footer-time" style="font-variant-numeric:tabular-nums;">--:--</span></span>
-      <span class="footer-tag">Verfügbar für neue Projekte</span>
+      <span class="footer-tag" data-en="Available for new projects">Verfügbar für neue Projekte</span>
     </div>
   </footer>
   <a class="back-top" id="backTop" href="#"><svg viewBox="0 0 16 16"><line x1="8" y1="13" x2="8" y2="3"/><polyline points="4,7 8,3 12,7"/></svg></a>
@@ -532,5 +545,24 @@
     });
   })();
   </script>
+<script>
+(function(){
+  var KEY='mr-lang',lang=localStorage.getItem(KEY)||'de';
+  function apply(l){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(!el.getAttribute('data-de'))el.setAttribute('data-de',el.textContent);
+      el.textContent=l==='en'?el.getAttribute('data-en'):el.getAttribute('data-de');
+    });
+    document.body.classList.toggle('lang-en',l==='en');
+    document.documentElement.lang=l;
+    localStorage.setItem(KEY,l);lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    apply(lang);
+    var btn=document.getElementById('langToggle');
+    if(btn)btn.addEventListener('click',function(){apply(lang==='de'?'en':'de');});
+  });
+})();
+</script>
 </body>
 </html>
