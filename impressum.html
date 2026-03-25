@@ -18,7 +18,16 @@
     :root{--accent:#737FDF;--accent-dark:#5B6CD1;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1);}
 
     html{font-size:18px;scroll-behavior:smooth;}
-        .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;justify-content:space-between;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s;}
+    /* ── Language Toggle ── */
+    .nav-right{display:flex;align-items:center;gap:2rem;margin-left:auto;}
+    .lang-toggle{background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.07em;text-transform:uppercase;padding:.26rem .65rem;color:inherit;display:flex;align-items:center;gap:.3rem;white-space:nowrap;opacity:.5;transition:opacity .25s;}
+    .lang-toggle:hover{opacity:.85;}
+    .lang-de-lbl,.lang-en-lbl{opacity:.45;transition:opacity .2s;}
+    .lang-sep-lbl{opacity:.25;}
+    body.lang-en .lang-en-lbl{opacity:1;}
+    body:not(.lang-en) .lang-de-lbl{opacity:1;}
+    @media(max-width:768px){.nav-right{position:relative;z-index:500;margin-left:auto;}.site-nav.menu-open .lang-toggle{color:#fff;}.lang-toggle{color:inherit;}}
+{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;justify-content:space-between;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s;}
     .site-nav.scrolled{background:rgba(243,243,243,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,0.06);}
     .site-nav.hidden{transform:translateY(-100%);}
 
@@ -372,8 +381,11 @@
   <div class="progress-bar" id="progress"></div>
     <nav class="site-nav" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links"><li><a href="projekte.html">Projekte</a></li><li><a href="ansatz.html">Über mich</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+    <div class="nav-right">
+      <ul class="nav-links"><li><a href="projekte.html">Projekte</a></li><li><a href="ansatz.html">Über mich</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln"><span class="lang-de-lbl">DE</span><span class="lang-sep-lbl"> · </span><span class="lang-en-lbl">EN</span></button>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </nav>
 
   <div class="legal-wrap">
@@ -585,5 +597,24 @@
     });
   })();
   </script>
+<script>
+(function(){
+  var KEY='mr-lang',lang=localStorage.getItem(KEY)||'de';
+  function apply(l){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(!el.getAttribute('data-de'))el.setAttribute('data-de',el.textContent);
+      el.textContent=l==='en'?el.getAttribute('data-en'):el.getAttribute('data-de');
+    });
+    document.body.classList.toggle('lang-en',l==='en');
+    document.documentElement.lang=l;
+    localStorage.setItem(KEY,l);lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    apply(lang);
+    var btn=document.getElementById('langToggle');
+    if(btn)btn.addEventListener('click',function(){apply(lang==='de'?'en':'de');});
+  });
+})();
+</script>
 </body>
 </html>
