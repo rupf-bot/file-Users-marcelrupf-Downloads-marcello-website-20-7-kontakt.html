@@ -14,7 +14,7 @@
   <meta property="og:locale" content="de_CH">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --heading-font:"Instrument Sans",sans-serif;--accent:#B78AFF;--accent-dark:#9b6ef5;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1); }
+    :root { --heading-font:"Instrument Sans",sans-serif;--accent:#737FDF;--accent-dark:#5B6CD1;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1); }
 
     html { font-size:18px; scroll-behavior:smooth; }
 
@@ -188,7 +188,7 @@
       top: 0; left: 0;
       width: 16px; height: 16px;
       border-radius: 50%;
-      background: #B78AFF;
+      background: #737FDF;
       pointer-events: none;
       z-index: 99999;
       transform: translate(-50%, -50%);
@@ -198,7 +198,7 @@
     #cursor.hover {
       width: 44px; height: 44px;
       background: transparent;
-      border: 1.5px solid #B78AFF;
+      border: 1.5px solid #737FDF;
     }
     @media (hover: none) {
       #cursor { display: none !important; }
@@ -543,7 +543,7 @@
             <button onclick="axSlide(-1)" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
             <button onclick="axSlide(1)" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
             <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
-              <span id="axDot0" style="width:7px;height:7px;border-radius:50%;background:#B78AFF;cursor:pointer;display:inline-block;" onclick="axSlideTo(0)"></span>
+              <span id="axDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="axSlideTo(0)"></span>
               <span id="axDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="axSlideTo(1)"></span>
               <span id="axDot2" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="axSlideTo(2)"></span>
             </div>
@@ -579,7 +579,7 @@
             <button onclick="scSlide(-1)" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
             <button onclick="scSlide(1)" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
             <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
-              <span id="scDot0" style="width:7px;height:7px;border-radius:50%;background:#B78AFF;cursor:pointer;display:inline-block;" onclick="scSlideTo(0)"></span>
+              <span id="scDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="scSlideTo(0)"></span>
               <span id="scDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="scSlideTo(1)"></span>
               <span id="scDot2" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="scSlideTo(2)"></span>
             </div>
@@ -616,7 +616,7 @@
             <button onclick="postSlide(-1)" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
             <button onclick="postSlide(1)" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
             <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
-              <span id="postDot0" style="width:7px;height:7px;border-radius:50%;background:#B78AFF;cursor:pointer;display:inline-block;" onclick="postSlideTo(0)"></span>
+              <span id="postDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="postSlideTo(0)"></span>
               <span id="postDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="postSlideTo(1)"></span>
             </div>
           </div>
@@ -671,7 +671,7 @@
             <button onclick="sgkbSlide(-1)" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
             <button onclick="sgkbSlide(1)" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
             <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
-              <span id="sgkbDot0" style="width:7px;height:7px;border-radius:50%;background:#B78AFF;cursor:pointer;display:inline-block;" onclick="sgkbSlideTo(0)"></span>
+              <span id="sgkbDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="sgkbSlideTo(0)"></span>
               <span id="sgkbDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="sgkbSlideTo(1)"></span>
               <span id="sgkbDot2" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="sgkbSlideTo(2)"></span>
             </div>
@@ -725,7 +725,7 @@
             <button onclick="svgwSlide(-1)" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
             <button onclick="svgwSlide(1)" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
             <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
-              <span id="svgwDot0" style="width:7px;height:7px;border-radius:50%;background:#B78AFF;cursor:pointer;display:inline-block;" onclick="svgwSlideTo(0)"></span>
+              <span id="svgwDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="svgwSlideTo(0)"></span>
               <span id="svgwDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="svgwSlideTo(1)"></span>
             </div>
           </div>
@@ -871,11 +871,11 @@
     window.slideNext=function(){current=(current+1)%total;update();};
     window.slideTo=function(i){current=i;update();};
   })();
-  (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('axTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('axDot'+j);if(d)d.style.background=j===cur?'#B78AFF':'rgba(255,255,255,.45)';}}window.axSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.axSlideTo=function(i){cur=i;upd();};})();
-  (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('scTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('scDot'+j);if(d)d.style.background=j===cur?'#B78AFF':'rgba(255,255,255,.45)';}}window.scSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.scSlideTo=function(i){cur=i;upd();};})();
-  (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('postTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('postDot'+j);if(d)d.style.background=j===cur?'#B78AFF':'rgba(255,255,255,.45)';}}window.postSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.postSlideTo=function(i){cur=i;upd();};})();
-  (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('sgkbTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('sgkbDot'+j);if(d)d.style.background=j===cur?'#B78AFF':'rgba(255,255,255,.45)';}}window.sgkbSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.sgkbSlideTo=function(i){cur=i;upd();};})();
-  (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('svgwTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('svgwDot'+j);if(d)d.style.background=j===cur?'#B78AFF':'rgba(255,255,255,.45)';}}window.svgwSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.svgwSlideTo=function(i){cur=i;upd();};})();
+  (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('axTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('axDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.axSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.axSlideTo=function(i){cur=i;upd();};})();
+  (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('scTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('scDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.scSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.scSlideTo=function(i){cur=i;upd();};})();
+  (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('postTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('postDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.postSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.postSlideTo=function(i){cur=i;upd();};})();
+  (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('sgkbTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('sgkbDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.sgkbSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.sgkbSlideTo=function(i){cur=i;upd();};})();
+  (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('svgwTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('svgwDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.svgwSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.svgwSlideTo=function(i){cur=i;upd();};})();
 </script>
     <script>
   (function(){
