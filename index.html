@@ -361,7 +361,8 @@
     @media (max-width: 900px) {
       .landing { grid-template-columns: 1fr; overflow: visible; height: auto; }
       .landing-right { display: none; }
-      .landing-left { background: #0d0d0f; padding: 7rem 1.5rem 3rem; min-height: 100vh; justify-content: center; }
+      .landing-left { background: #0d0d0f; padding: 5rem 1.5rem 3rem; min-height: 100vh; justify-content: center; }
+      .landing-title { margin-top: 1rem; }
       .teaser-grid { grid-template-columns: 1fr; }
       footer { padding: 3rem 1.5rem 2rem; }
       .footer-grid { grid-template-columns: repeat(2,1fr); }
@@ -369,7 +370,7 @@
       .divider { margin: 0 1.5rem; }
     }
     @media (max-width: 540px) {
-      .landing-left { padding: 6rem 1.2rem 3rem; }
+      .landing-left { padding: 4.5rem 1.2rem 3rem; }
       .landing-cta { flex-direction: column; }
       .teaser-section { padding: 3rem 1.2rem 4rem; }
       .page-hero { padding-left: 1.2rem; padding-right: 1.2rem; }
@@ -525,7 +526,7 @@
     </div>
 
     <div class="landing-right">
-      <img loading="lazy" src="img/index/image-01.webp" alt="Marcel Rupf" />
+      <img loading="eager" fetchpriority="high" src="img/index/image-01.webp" alt="Marcel Rupf" />
     <div class="scroll-hint">
         <span data-en="Scroll">Scrollen</span>
         <svg viewBox="0 0 14 14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="2" x2="7" y2="12"/><polyline points="4,9 7,12 10,9"/></svg>
@@ -569,7 +570,7 @@
     <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcello</span></div></div>
     <div class="footer-grid">
       <div class="footer-col"><div class="footer-col-label" data-en="Legal">Rechtliches</div><a href="impressum.html" data-en="Legal Notice &amp; Privacy">Impressum &amp; Datenschutz</a></div>
-      <div class="footer-col"><div class="footer-col-label" data-en="Network">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">LinkedIn</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Network">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
       <div class="footer-col"><div class="footer-col-label" data-en="Contact">Kontakt</div><a href="mailto:hallo@marcelrupf.com">hallo@marcelrupf.com</a></div>
       <div class="footer-col"><div class="footer-col-label">&nbsp;</div><span style="color:rgba(255,255,255,0.3)">©2026 Marcel Rupf</span></div>
     </div>
