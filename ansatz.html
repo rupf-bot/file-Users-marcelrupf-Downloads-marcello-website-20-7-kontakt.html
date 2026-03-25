@@ -17,7 +17,16 @@
     :root{--heading-font:"Instrument Sans",sans-serif;--accent:#B78AFF;--accent-dark:#9b6ef5;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1);}
 
     html{font-size:18px;scroll-behavior:smooth;}
-    .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;justify-content:space-between;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s;}
+    /* ── Language Toggle ── */
+    .nav-right{display:flex;align-items:center;gap:2rem;}
+    .lang-toggle{background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.06em;padding:0;line-height:1;color:inherit;display:flex;align-items:center;gap:.2rem;}
+    .lang-de-lbl,.lang-en-lbl{opacity:.35;transition:opacity .2s;}
+    .lang-sep-lbl{opacity:.15;}
+    body.lang-en .lang-en-lbl{opacity:1;}
+    body:not(.lang-en) .lang-de-lbl{opacity:1;}
+    @media(max-width:768px){.nav-right{position:relative;z-index:500;margin-left:auto;}.site-nav.menu-open .lang-toggle{color:#fff;}.nav-hamburger.open~.lang-toggle,.lang-toggle{color:inherit;}}
+
+    .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s;}
     .site-nav.scrolled{background:rgba(243,243,243,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,0.06);}
     .site-nav.hidden{transform:translateY(-100%);}
     
@@ -25,7 +34,7 @@
     .nav-logo:hover{color:var(--accent);}
     .nav-left{display:flex;align-items:baseline;gap:.6rem;}
     .nav-sub{font-size:.72rem;font-weight:500;color:rgba(19,18,23,0.45);letter-spacing:.01em;}
-    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .nav-right { display: flex; align-items: center; gap: 2rem; margin-left: auto; }
     .nav-links{display:flex;gap:2rem;list-style:none;}
     .nav-links a{font-weight:600;font-size:.88rem;color:var(--dark);transition:color .25s;}
     .nav-links a:hover,.nav-links a.active{color:var(--accent);}
@@ -271,36 +280,39 @@
   <div class="progress-bar" id="progress"></div>
   <nav class="site-nav" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links"><li><a href="projekte.html" >Projekte</a></li><li><a href="ansatz.html" class="active">Über mich</a></li><li><a href="kontakt.html" >Kontakt</a></li></ul>
+    <div class="nav-right">
+      <ul class="nav-links"><li><a href="projekte.html"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html" class="active"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln"><span class="lang-de-lbl">DE</span><span class="lang-sep-lbl"> · </span><span class="lang-en-lbl">EN</span></button>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </nav>
 
   <div class="page-hero">
     <img loading="lazy" class="hero-portrait reveal" src="img/ansatz/image-01.webp" alt="Marcel Rupf" />
-    <p class="page-eyebrow reveal">Wie ich arbeite</p>
-    <h1 class="page-title reveal delay-1">Über mich</h1>
-    <p class="page-sub reveal delay-2">Transformation gelingt nicht durch Konzepte allein — sondern durch konsequente Umsetzung, klare Kommunikation und die Befähigung von Menschen. Hier sind die Prinzipien, die meine Arbeit leiten.</p>
+    <p class="page-eyebrow reveal" data-en="How I work">Wie ich arbeite</p>
+    <h1 class="page-title reveal delay-1" data-en="About me">Über mich</h1>
+    <p class="page-sub reveal delay-2" data-en="Transformation succeeds not through concepts alone — but through consistent execution, clear communication and empowering people. Here are the principles that guide my work.">Transformation gelingt nicht durch Konzepte allein — sondern durch konsequente Umsetzung, klare Kommunikation und die Befähigung von Menschen. Hier sind die Prinzipien, die meine Arbeit leiten.</p>
   </div>
   <div class="divider"></div>
 
   <div class="ansatz-body">
 
     <div style="margin-bottom:1rem;" class="reveal">
-      <p class="section-label">Grundprinzipien</p>
-      <h2 class="section-title">Was mich leitet</h2>
+      <p class="section-label" data-en="Core principles">Grundprinzipien</p>
+      <h2 class="section-title" data-en="What guides me">Was mich leitet</h2>
     </div>
     <div class="principles-grid">
       <div class="principle-card reveal delay-1">
         <div class="principle-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,17 3,13 7,13 7,9 11,9 11,5 17,5"/><polyline points="14,5 17,5 17,8"/></svg></div>
         <div class="principle-num">01</div>
-        <div class="principle-title">Strategie trifft Umsetzung</div>
-        <div class="principle-desc">Ich verbinde strategisches Denken mit operativem Handeln. Konzepte entstehen immer mit Blick auf Machbarkeit und konkrete Wirkung.</div>
+        <div class="principle-title" data-en="Strategy meets execution">Strategie trifft Umsetzung</div>
+        <div class="principle-desc" data-en="I combine strategic thinking with operational action. Concepts always take feasibility and concrete impact into account.">Ich verbinde strategisches Denken mit operativem Handeln. Konzepte entstehen immer mit Blick auf Machbarkeit und konkrete Wirkung.</div>
       </div>
       <div class="principle-card reveal delay-2">
         <div class="principle-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="8" r="2"/><circle cx="15" cy="5" r="2"/><circle cx="15" cy="14" r="2"/><circle cx="10" cy="17" r="2"/><line x1="7" y1="8" x2="13" y2="5.8"/><line x1="15" y1="7" x2="15" y2="12"/><line x1="13.5" y1="14.8" x2="11.8" y2="16.2"/><line x1="6.5" y1="9.5" x2="9" y2="16"/></svg></div>
         <div class="principle-num">02</div>
-        <div class="principle-title">Systemisches Denken</div>
-        <div class="principle-desc">Organisationen sind komplexe Systeme. Ich analysiere Wechselwirkungen, bevor ich interveniere — und gestalte nachhaltige Veränderung statt kurzfristiger Fixes.</div>
+        <div class="principle-title" data-en="Systems thinking">Systemisches Denken</div>
+        <div class="principle-desc" data-en="Organisations are complex systems. I analyse interdependencies before intervening — and design lasting change rather than short-term fixes.">Organisationen sind komplexe Systeme. Ich analysiere Wechselwirkungen, bevor ich interveniere — und gestalte nachhaltige Veränderung statt kurzfristiger Fixes.</div>
       </div>
       <div class="principle-card reveal delay-3">
         <div class="principle-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="6" r="3"/><path d="M4 18c0-4 2.7-6 6-6s6 2 6 6"/><circle cx="3.5" cy="8" r="2"/><path d="M1 17c0-2.5 1.2-3.5 2.5-3.5"/><circle cx="16.5" cy="8" r="2"/><path d="M19 17c0-2.5-1.2-3.5-2.5-3.5"/></svg></div>

@@ -518,21 +518,21 @@
     <div class="teaser-grid">
       <a href="projekte.html" class="teaser-card reveal delay-1">
         <div class="teaser-num">01</div>
-        <div class="teaser-card-title">Projekte</div>
-        <div class="teaser-card-desc">Transformationsprojekte aus unterschiedlichen Branchen und Kontexten — von der Konzeption bis zur Umsetzung.</div>
-        <div class="teaser-card-link">Projekte ansehen <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="7" x2="12" y2="7"/><polyline points="8,3 12,7 8,11"/></svg></div>
+        <div class="teaser-card-title" data-en="Projects">Projekte</div>
+        <div class="teaser-card-desc" data-en="Transformation projects from diverse industries and contexts — from conception to delivery.">Transformationsprojekte aus unterschiedlichen Branchen und Kontexten — von der Konzeption bis zur Umsetzung.</div>
+        <div class="teaser-card-link"><span data-en="View projects">Projekte ansehen</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="7" x2="12" y2="7"/><polyline points="8,3 12,7 8,11"/></svg></div>
       </a>
       <a href="ansatz.html" class="teaser-card reveal delay-2">
         <div class="teaser-num">02</div>
-        <div class="teaser-card-title">Über mich</div>
-        <div class="teaser-card-desc">Wie ich arbeite, was ich mitbringe und welche Prinzipien meine Arbeit leiten — von Stakeholder Management bis zu agilen Methoden.</div>
-        <div class="teaser-card-link">Ansatz entdecken <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="7" x2="12" y2="7"/><polyline points="8,3 12,7 8,11"/></svg></div>
+        <div class="teaser-card-title" data-en="About me">Über mich</div>
+        <div class="teaser-card-desc" data-en="How I work, what I bring, and the principles that guide my work — from stakeholder management to agile methods.">Wie ich arbeite, was ich mitbringe und welche Prinzipien meine Arbeit leiten — von Stakeholder Management bis zu agilen Methoden.</div>
+        <div class="teaser-card-link"><span data-en="Explore approach">Ansatz entdecken</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="7" x2="12" y2="7"/><polyline points="8,3 12,7 8,11"/></svg></div>
       </a>
       <a href="kontakt.html" class="teaser-card reveal delay-3">
         <div class="teaser-num">03</div>
-        <div class="teaser-card-title">Kontakt</div>
-        <div class="teaser-card-desc">Verfügbar für Beratungsmandate, Interim-Rollen und Vorträge. Ich melde mich innert 24 Stunden.</div>
-        <div class="teaser-card-link">Kontakt aufnehmen <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="7" x2="12" y2="7"/><polyline points="8,3 12,7 8,11"/></svg></div>
+        <div class="teaser-card-title" data-en="Contact">Kontakt</div>
+        <div class="teaser-card-desc" data-en="Available for consulting mandates, interim roles and talks. I respond within 24 hours.">Verfügbar für Beratungsmandate, Interim-Rollen und Vorträge. Ich melde mich innert 24 Stunden.</div>
+        <div class="teaser-card-link"><span data-en="Get in touch">Kontakt aufnehmen</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="7" x2="12" y2="7"/><polyline points="8,3 12,7 8,11"/></svg></div>
       </a>
     </div>
   </section>
@@ -541,14 +541,14 @@
   <footer>
     <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcello</span></div></div>
     <div class="footer-grid">
-      <div class="footer-col"><div class="footer-col-label">Rechtliches</div><a href="impressum.html">Impressum & Datenschutz</a></div>
-      <div class="footer-col"><div class="footer-col-label">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">LinkedIn</a></div>
-      <div class="footer-col"><div class="footer-col-label">Kontakt</div><a href="mailto:hello@marcelrupf.com">hello@marcelrupf.com</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Legal">Rechtliches</div><a href="impressum.html" data-en="Legal Notice &amp; Privacy">Impressum &amp; Datenschutz</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Network">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">LinkedIn</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Contact">Kontakt</div><a href="mailto:hello@marcelrupf.com">hello@marcelrupf.com</a></div>
       <div class="footer-col"><div class="footer-col-label">&nbsp;</div><span style="color:rgba(255,255,255,0.3)">©2026 Marcel Rupf</span></div>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">Experience & AI Strategy Leader · Zürich · <span id="footer-time" style="font-variant-numeric:tabular-nums;">--:--</span></span>
-      <span class="footer-tag">Verfügbar für neue Projekte</span>
+      <span class="footer-tag" data-en="Available for new projects">Verfügbar für neue Projekte</span>
     </div>
   </footer>
 
@@ -693,5 +693,24 @@
     });
   })();
   </script>
+<script>
+(function(){
+  var KEY='mr-lang',lang=localStorage.getItem(KEY)||'de';
+  function apply(l){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(!el.getAttribute('data-de'))el.setAttribute('data-de',el.textContent);
+      el.textContent=l==='en'?el.getAttribute('data-en'):el.getAttribute('data-de');
+    });
+    document.body.classList.toggle('lang-en',l==='en');
+    document.documentElement.lang=l;
+    localStorage.setItem(KEY,l);lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    apply(lang);
+    var btn=document.getElementById('langToggle');
+    if(btn)btn.addEventListener('click',function(){apply(lang==='de'?'en':'de');});
+  });
+})();
+</script>
 </body>
 </html>
