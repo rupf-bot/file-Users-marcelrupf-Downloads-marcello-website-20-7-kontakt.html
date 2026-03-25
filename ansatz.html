@@ -17,7 +17,16 @@
     :root{--heading-font:"Instrument Sans",sans-serif;--accent:#B78AFF;--accent-dark:#9b6ef5;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1);}
 
     html{font-size:18px;scroll-behavior:smooth;}
-    .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;justify-content:space-between;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s;}
+    /* ── Language Toggle ── */
+    .nav-right{display:flex;align-items:center;gap:2rem;}
+    .lang-toggle{background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.06em;padding:0;line-height:1;color:inherit;display:flex;align-items:center;gap:.2rem;}
+    .lang-de-lbl,.lang-en-lbl{opacity:.35;transition:opacity .2s;}
+    .lang-sep-lbl{opacity:.15;}
+    body.lang-en .lang-en-lbl{opacity:1;}
+    body:not(.lang-en) .lang-de-lbl{opacity:1;}
+    @media(max-width:768px){.nav-right{position:relative;z-index:500;margin-left:auto;}.site-nav.menu-open .lang-toggle{color:#fff;}.nav-hamburger.open~.lang-toggle,.lang-toggle{color:inherit;}}
+
+    .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s;}
     .site-nav.scrolled{background:rgba(243,243,243,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,0.06);}
     .site-nav.hidden{transform:translateY(-100%);}
     
@@ -25,7 +34,7 @@
     .nav-logo:hover{color:var(--accent);}
     .nav-left{display:flex;align-items:baseline;gap:.6rem;}
     .nav-sub{font-size:.72rem;font-weight:500;color:rgba(19,18,23,0.45);letter-spacing:.01em;}
-    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .nav-right { display: flex; align-items: center; gap: 2rem; margin-left: auto; }
     .nav-links{display:flex;gap:2rem;list-style:none;}
     .nav-links a{font-weight:600;font-size:.88rem;color:var(--dark);transition:color .25s;}
     .nav-links a:hover,.nav-links a.active{color:var(--accent);}
@@ -271,100 +280,103 @@
   <div class="progress-bar" id="progress"></div>
   <nav class="site-nav" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links"><li><a href="projekte.html" >Projekte</a></li><li><a href="ansatz.html" class="active">Über mich</a></li><li><a href="kontakt.html" >Kontakt</a></li></ul>
+    <div class="nav-right">
+      <ul class="nav-links"><li><a href="projekte.html"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html" class="active"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln"><span class="lang-de-lbl">DE</span><span class="lang-sep-lbl"> · </span><span class="lang-en-lbl">EN</span></button>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </nav>
 
   <div class="page-hero">
     <img loading="lazy" class="hero-portrait reveal" src="img/ansatz/image-01.webp" alt="Marcel Rupf" />
-    <p class="page-eyebrow reveal">Wie ich arbeite</p>
-    <h1 class="page-title reveal delay-1">Über mich</h1>
-    <p class="page-sub reveal delay-2">Transformation gelingt nicht durch Konzepte allein — sondern durch konsequente Umsetzung, klare Kommunikation und die Befähigung von Menschen. Hier sind die Prinzipien, die meine Arbeit leiten.</p>
+    <p class="page-eyebrow reveal" data-en="How I work">Wie ich arbeite</p>
+    <h1 class="page-title reveal delay-1" data-en="About me">Über mich</h1>
+    <p class="page-sub reveal delay-2" data-en="Transformation succeeds not through concepts alone — but through consistent execution, clear communication and empowering people. Here are the principles that guide my work.">Transformation gelingt nicht durch Konzepte allein — sondern durch konsequente Umsetzung, klare Kommunikation und die Befähigung von Menschen. Hier sind die Prinzipien, die meine Arbeit leiten.</p>
   </div>
   <div class="divider"></div>
 
   <div class="ansatz-body">
 
     <div style="margin-bottom:1rem;" class="reveal">
-      <p class="section-label">Grundprinzipien</p>
-      <h2 class="section-title">Was mich leitet</h2>
+      <p class="section-label" data-en="Core principles">Grundprinzipien</p>
+      <h2 class="section-title" data-en="What guides me">Was mich leitet</h2>
     </div>
     <div class="principles-grid">
       <div class="principle-card reveal delay-1">
         <div class="principle-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,17 3,13 7,13 7,9 11,9 11,5 17,5"/><polyline points="14,5 17,5 17,8"/></svg></div>
         <div class="principle-num">01</div>
-        <div class="principle-title">Strategie trifft Umsetzung</div>
-        <div class="principle-desc">Ich verbinde strategisches Denken mit operativem Handeln. Konzepte entstehen immer mit Blick auf Machbarkeit und konkrete Wirkung.</div>
+        <div class="principle-title" data-en="Strategy meets execution">Strategie trifft Umsetzung</div>
+        <div class="principle-desc" data-en="I combine strategic thinking with operational action. Concepts always take feasibility and concrete impact into account.">Ich verbinde strategisches Denken mit operativem Handeln. Konzepte entstehen immer mit Blick auf Machbarkeit und konkrete Wirkung.</div>
       </div>
       <div class="principle-card reveal delay-2">
         <div class="principle-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="8" r="2"/><circle cx="15" cy="5" r="2"/><circle cx="15" cy="14" r="2"/><circle cx="10" cy="17" r="2"/><line x1="7" y1="8" x2="13" y2="5.8"/><line x1="15" y1="7" x2="15" y2="12"/><line x1="13.5" y1="14.8" x2="11.8" y2="16.2"/><line x1="6.5" y1="9.5" x2="9" y2="16"/></svg></div>
         <div class="principle-num">02</div>
-        <div class="principle-title">Systemisches Denken</div>
-        <div class="principle-desc">Organisationen sind komplexe Systeme. Ich analysiere Wechselwirkungen, bevor ich interveniere — und gestalte nachhaltige Veränderung statt kurzfristiger Fixes.</div>
+        <div class="principle-title" data-en="Systems thinking">Systemisches Denken</div>
+        <div class="principle-desc" data-en="Organisations are complex systems. I analyse interdependencies before intervening — and design lasting change rather than short-term fixes.">Organisationen sind komplexe Systeme. Ich analysiere Wechselwirkungen, bevor ich interveniere — und gestalte nachhaltige Veränderung statt kurzfristiger Fixes.</div>
       </div>
       <div class="principle-card reveal delay-3">
         <div class="principle-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="6" r="3"/><path d="M4 18c0-4 2.7-6 6-6s6 2 6 6"/><circle cx="3.5" cy="8" r="2"/><path d="M1 17c0-2.5 1.2-3.5 2.5-3.5"/><circle cx="16.5" cy="8" r="2"/><path d="M19 17c0-2.5-1.2-3.5-2.5-3.5"/></svg></div>
         <div class="principle-num">03</div>
-        <div class="principle-title">Menschen im Mittelpunkt</div>
-        <div class="principle-desc">Erfolgreiche Transformation beginnt bei den Menschen. Ich investiere in Verständnis, Vertrauen und Befähigung — auf allen Ebenen der Organisation.</div>
+        <div class="principle-title" data-en="People at the centre">Menschen im Mittelpunkt</div>
+        <div class="principle-desc" data-en="Successful transformation starts with people. I invest in understanding, trust and empowerment — at all levels of the organisation.">Erfolgreiche Transformation beginnt bei den Menschen. Ich investiere in Verständnis, Vertrauen und Befähigung — auf allen Ebenen der Organisation.</div>
       </div>
       <div class="principle-card reveal delay-1">
         <div class="principle-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="8" height="8" rx="1.5"/><line x1="9" y1="6" x2="9" y2="3"/><line x1="13" y1="6" x2="13" y2="3"/><line x1="9" y1="17" x2="9" y2="14"/><line x1="13" y1="17" x2="13" y2="14"/><line x1="6" y1="9" x2="3" y2="9"/><line x1="6" y1="13" x2="3" y2="13"/><line x1="17" y1="9" x2="14" y2="9"/><line x1="17" y1="13" x2="14" y2="13"/></svg></div>
         <div class="principle-num">04</div>
-        <div class="principle-title">AI als Enabler, nicht als Ersatz</div>
-        <div class="principle-desc">KI entfaltet ihren Wert erst, wenn sie konsequent von Nutzerbedürfnissen her gedacht wird. Ich begleite AI-Initiativen von der Use-Case-Identifikation bis zur messbaren Wirkung.</div>
+        <div class="principle-title" data-en="AI as enabler, not replacement">AI als Enabler, nicht als Ersatz</div>
+        <div class="principle-desc" data-en="AI creates value only when thought through consistently from user needs. I accompany AI initiatives from use-case identification to measurable impact.">KI entfaltet ihren Wert erst, wenn sie konsequent von Nutzerbedürfnissen her gedacht wird. Ich begleite AI-Initiativen von der Use-Case-Identifikation bis zur messbaren Wirkung.</div>
       </div>
       <div class="principle-card reveal delay-1">
         <div class="principle-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="17" x2="3" y2="4"/><line x1="3" y1="17" x2="18" y2="17"/><line x1="4" y1="15" x2="15" y2="5" stroke-width="2.2"/><polyline points="11,5 15,5 15,9"/></svg></div>
         <div class="principle-num">05</div>
-        <div class="principle-title">Datenbasierte Entscheidungen</div>
-        <div class="principle-desc">Ich schaffe Klarheit durch Fakten. Qualitative Einsichten und quantitative Daten ergänzen sich — und ermöglichen fundierte Entscheidungen auf Senior Level.</div>
+        <div class="principle-title" data-en="Data-driven decisions">Datenbasierte Entscheidungen</div>
+        <div class="principle-desc" data-en="I create clarity through facts. Qualitative insights and quantitative data complement each other — enabling informed decisions at senior level.">Ich schaffe Klarheit durch Fakten. Qualitative Einsichten und quantitative Daten ergänzen sich — und ermöglichen fundierte Entscheidungen auf Senior Level.</div>
       </div>
       <div class="principle-card reveal delay-2">
         <div class="principle-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 10a6 6 0 1 1-1.76-4.24"/><polyline points="14,3 16,6 13,6"/></svg></div>
         <div class="principle-num">06</div>
-        <div class="principle-title">Iteratives Vorgehen</div>
-        <div class="principle-desc">Grosse Veränderungen gelingen schrittweise. Ich arbeite in überschaubaren Zyklen, lerne schnell und passe an — ohne das grosse Ziel aus den Augen zu verlieren.</div>
+        <div class="principle-title" data-en="Iterative approach">Iteratives Vorgehen</div>
+        <div class="principle-desc" data-en="Major changes succeed step by step. I work in manageable cycles, learn fast and adapt — without losing sight of the big goal.">Grosse Veränderungen gelingen schrittweise. Ich arbeite in überschaubaren Zyklen, lerne schnell und passe an — ohne das grosse Ziel aus den Augen zu verlieren.</div>
       </div>
       <div class="principle-card reveal delay-3">
         <div class="principle-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2L3 5v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V5z"/><line x1="10" y1="8" x2="10" y2="14"/><line x1="7" y1="11" x2="13" y2="11"/></svg></div>
         <div class="principle-num">07</div>
-        <div class="principle-title">Governance & Klarheit</div>
-        <div class="principle-desc">Klare Strukturen, Rollen und Entscheidungskompetenzen sind die Voraussetzung für Agilität. Ich baue Governance so, dass sie ermöglicht statt bremst.</div>
+        <div class="principle-title" data-en="Governance &amp; clarity">Governance &amp; Klarheit</div>
+        <div class="principle-desc" data-en="Clear structures, roles and decision-making authority are prerequisites for agility. I build governance that enables rather than hinders.">Klare Strukturen, Rollen und Entscheidungskompetenzen sind die Voraussetzung für Agilität. Ich baue Governance so, dass sie ermöglicht statt bremst.</div>
       </div>
     </div>
 
     <div class="skills-section">
-      <div class="reveal"><p class="section-label">Kompetenzen</p><h2 class="section-title">Was ich mitbringe</h2></div>
+      <div class="reveal"><p class="section-label" data-en="Competencies">Kompetenzen</p><h2 class="section-title" data-en="What I bring">Was ich mitbringe</h2></div>
       <div class="skills-grid">
         <div class="skill-row reveal delay-1"><div class="skill-top"><span class="skill-name">Transformation Management</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
         <div class="skill-row reveal delay-2"><div class="skill-top"><span class="skill-name">Stakeholder Management</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
-        <div class="skill-row reveal delay-1"><div class="skill-top"><span class="skill-name">Produktentwicklung</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+        <div class="skill-row reveal delay-1"><div class="skill-top"><span class="skill-name" data-en="Product Development">Produktentwicklung</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
         <div class="skill-row reveal delay-2"><div class="skill-top"><span class="skill-name">Data & Analytics</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
-        <div class="skill-row reveal delay-1"><div class="skill-top"><span class="skill-name">Agile Methoden</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+        <div class="skill-row reveal delay-1"><div class="skill-top"><span class="skill-name" data-en="Agile Methods">Agile Methoden</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
         <div class="skill-row reveal delay-2"><div class="skill-top"><span class="skill-name">Change Management</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
         <div class="skill-row reveal delay-1"><div class="skill-top"><span class="skill-name">Governance & Struktur</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:83%"></div></div></div>
-        <div class="skill-row reveal delay-2"><div class="skill-top"><span class="skill-name">Führung & Coaching</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:87%"></div></div></div>
-        <div class="skill-row reveal delay-1"><div class="skill-top"><span class="skill-name">AI & GenAI Strategie</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:86%"></div></div></div>
-        <div class="skill-row reveal delay-2"><div class="skill-top"><span class="skill-name">AI-gestützte UX & CX</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:84%"></div></div></div>
+        <div class="skill-row reveal delay-2"><div class="skill-top"><span class="skill-name" data-en="Leadership &amp; Coaching">Führung &amp; Coaching</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:87%"></div></div></div>
+        <div class="skill-row reveal delay-1"><div class="skill-top"><span class="skill-name" data-en="AI &amp; GenAI Strategy">AI &amp; GenAI Strategie</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:86%"></div></div></div>
+        <div class="skill-row reveal delay-2"><div class="skill-top"><span class="skill-name" data-en="AI-driven UX &amp; CX">AI-gestützte UX &amp; CX</span><span class="skill-level">Senior</span></div><div class="skill-bar"><div class="skill-fill" style="width:84%"></div></div></div>
       </div>
     </div>
 
     <div class="timeline-section">
-      <div class="reveal"><p class="section-label">Werdegang</p><h2 class="section-title">Erfahrung</h2></div>
+      <div class="reveal"><p class="section-label" data-en="Career">Werdegang</p><h2 class="section-title" data-en="Experience">Erfahrung</h2></div>
       <div class="timeline">
 
         <div class="timeline-item reveal">
-          <div class="timeline-period">2023 – heute</div>
+          <div class="timeline-period" data-en="2023 – present">2023 – heute</div>
           <div class="timeline-content">
             <div class="timeline-role">Head of User Experience</div>
-            <div class="timeline-org">AXA Schweiz · Customer Experience and Strategy, Winterthur</div>
+            <div class="timeline-org" data-en="AXA Switzerland · Customer Experience and Strategy, Winterthur">AXA Schweiz · Customer Experience and Strategy, Winterthur</div>
             <ul class="timeline-bullets">
-              <li>Führung und Weiterentwicklung eines interdisziplinären Teams von 10 UX Spezialistinnen und Spezialisten im Bereich Customer Experience und digitale Transformation</li>
-              <li>Strategische Steuerung von Data und GenAI Initiativen zur Weiterentwicklung kundenorientierter Geschäftsprozesse</li>
-              <li>Identifikation und Priorisierung von sieben GenAI Use Cases inklusive Business Impact Analyse und Transformations Roadmap</li>
-              <li>Einführung datengetriebener Steuerungskennzahlen zur Messung von Effizienz, Servicequalität und Kundenzufriedenheit</li>
-              <li>Aufbau von Governance Strukturen in Zusammenarbeit mit IT, Data und Compliance zur Sicherstellung von Datenschutz und regulatorischen Anforderungen</li>
+              <li data-en="Leadership and development of an interdisciplinary team of 10 UX specialists in customer experience and digital transformation">Führung und Weiterentwicklung eines interdisziplinären Teams von 10 UX Spezialistinnen und Spezialisten im Bereich Customer Experience und digitale Transformation</li>
+              <li data-en="Strategic governance of data and GenAI initiatives to advance customer-centred business processes">Strategische Steuerung von Data und GenAI Initiativen zur Weiterentwicklung kundenorientierter Geschäftsprozesse</li>
+              <li data-en="Identification and prioritisation of seven GenAI use cases including business impact analysis and transformation roadmap">Identifikation und Priorisierung von sieben GenAI Use Cases inklusive Business Impact Analyse und Transformations Roadmap</li>
+              <li data-en="Introduction of data-driven KPIs to measure efficiency, service quality and customer satisfaction">Einführung datengetriebener Steuerungskennzahlen zur Messung von Effizienz, Servicequalität und Kundenzufriedenheit</li>
+              <li data-en="Building governance structures in collaboration with IT, Data and Compliance to ensure data protection and regulatory compliance">Aufbau von Governance Strukturen in Zusammenarbeit mit IT, Data und Compliance zur Sicherstellung von Datenschutz und regulatorischen Anforderungen</li>
             </ul>
           </div>
         </div>
@@ -373,12 +385,12 @@
           <div class="timeline-period">2020 – 2023</div>
           <div class="timeline-content">
             <div class="timeline-role">Stream Lead User Experience SAFe</div>
-            <div class="timeline-org">Swisscom AG · Zürich und Bern</div>
+            <div class="timeline-org" data-en="Swisscom AG · Zurich and Bern">Swisscom AG · Zürich und Bern</div>
             <ul class="timeline-bullets">
-              <li>Führung eines interdisziplinären UX Teams im B2B Umfeld innerhalb einer agilen Organisationsstruktur</li>
-              <li>Steuerung datenbasierter Customer Journey Optimierungen zur Verbesserung digitaler Serviceprozesse</li>
-              <li>Moderation von bereichsübergreifenden Entscheidungsformaten und Steering Committees auf Management Ebene</li>
-              <li>Enge Zusammenarbeit mit IT und Technologie Partnern zur Integration neuer digitaler Lösungen</li>
+              <li data-en="Leadership of an interdisciplinary UX team in a B2B environment within an agile organisational structure">Führung eines interdisziplinären UX Teams im B2B Umfeld innerhalb einer agilen Organisationsstruktur</li>
+              <li data-en="Data-driven customer journey optimisations to improve digital service processes">Steuerung datenbasierter Customer Journey Optimierungen zur Verbesserung digitaler Serviceprozesse</li>
+              <li data-en="Facilitation of cross-divisional decision-making forums and steering committees at management level">Moderation von bereichsübergreifenden Entscheidungsformaten und Steering Committees auf Management Ebene</li>
+              <li data-en="Close collaboration with IT and technology partners to integrate new digital solutions">Enge Zusammenarbeit mit IT und Technologie Partnern zur Integration neuer digitaler Lösungen</li>
             </ul>
           </div>
         </div>
@@ -388,43 +400,43 @@
           <div class="timeline-content">
             <div class="timeline-role">User Experience Consultant</div>
             <div class="timeline-org">evux AG · Zürich</div>
-            <div class="timeline-desc">Beratung und Implementierung von UX-Lösungen für diverse Kunden wie z.B. Die Post, St.Galler und Zürcher Kantonalbank, St.Galler Stadtwerke.</div>
+            <div class="timeline-desc" data-en="Consulting and implementation of UX solutions for clients including Die Post, St.Galler and Zürcher Kantonalbank, St.Galler Stadtwerke.">Beratung und Implementierung von UX-Lösungen für diverse Kunden wie z.B. Die Post, St.Galler und Zürcher Kantonalbank, St.Galler Stadtwerke.</div>
           </div>
         </div>
 
         <div class="timeline-item reveal delay-1">
           <div class="timeline-period">2015 – 2018</div>
           <div class="timeline-content">
-            <div class="timeline-role">Teamlead, Berater & Projektleiter</div>
+            <div class="timeline-role" data-en="Team Lead, Consultant &amp; Project Manager">Teamlead, Berater &amp; Projektleiter</div>
             <div class="timeline-org">Simplificator AG · Zürich</div>
-            <div class="timeline-desc">Leitung und Koordination von agilen Projekten nach Scrum mit Budgetverantwortung, Beratung von Kunden und Führung eines Entwickler-Teams.</div>
+            <div class="timeline-desc" data-en="Leading and coordinating agile Scrum projects with budget responsibility, client consulting and development team management.">Leitung und Koordination von agilen Projekten nach Scrum mit Budgetverantwortung, Beratung von Kunden und Führung eines Entwickler-Teams.</div>
           </div>
         </div>
 
         <div class="timeline-item reveal delay-1">
           <div class="timeline-period">2011 – 2018</div>
           <div class="timeline-content">
-            <div class="timeline-role">Selbstständiger Unternehmer</div>
+            <div class="timeline-role" data-en="Independent Entrepreneur">Selbstständiger Unternehmer</div>
             <div class="timeline-org">RUPF. BFG · Zürich</div>
-            <div class="timeline-desc">Erbringung von Beratungs- und Design-Dienstleistungen für KMU's in der Schweiz.</div>
+            <div class="timeline-desc" data-en="Providing consulting and design services for SMEs in Switzerland.">Erbringung von Beratungs- und Design-Dienstleistungen für KMU's in der Schweiz.</div>
           </div>
         </div>
 
         <div class="timeline-item reveal delay-1">
           <div class="timeline-period">2016 – 2017</div>
           <div class="timeline-content">
-            <div class="timeline-role">PL-Lehrgangsentwicklung</div>
+            <div class="timeline-role" data-en="Programme Lead – Curriculum Development">PL-Lehrgangsentwicklung</div>
             <div class="timeline-org">SfG Aargau · Aarau</div>
-            <div class="timeline-desc">Entwicklung von UX-Lehrgängen und Kursinhalten.</div>
+            <div class="timeline-desc" data-en="Development of UX curricula and course content.">Entwicklung von UX-Lehrgängen und Kursinhalten.</div>
           </div>
         </div>
 
         <div class="timeline-item reveal delay-1">
           <div class="timeline-period">2011 – 2014</div>
           <div class="timeline-content">
-            <div class="timeline-role">Dozent & Lehrbeauftragter</div>
+            <div class="timeline-role" data-en="Lecturer &amp; Teaching Associate">Dozent &amp; Lehrbeauftragter</div>
             <div class="timeline-org">FHGR · Chur</div>
-            <div class="timeline-desc">Lehre und Betreuung von Studierenden im Bereich Multimedia-Design.</div>
+            <div class="timeline-desc" data-en="Teaching and supervising students in multimedia design.">Lehre und Betreuung von Studierenden im Bereich Multimedia-Design.</div>
           </div>
         </div>
 
@@ -433,7 +445,7 @@
           <div class="timeline-content">
             <div class="timeline-role">Brand Designer</div>
             <div class="timeline-org">MetaDesign · Berlin und Zürich</div>
-            <div class="timeline-desc">Gestaltung und Umsetzung von Markenauftritten.</div>
+            <div class="timeline-desc" data-en="Design and implementation of brand identities.">Gestaltung und Umsetzung von Markenauftritten.</div>
           </div>
         </div>
 
@@ -441,9 +453,17 @@
     </div>
 
     <div class="timeline-section reveal">
-      <p class="section-label">Ausbildung</p>
-      <h2 class="section-title">Bildungsweg</h2>
+      <p class="section-label" data-en="Education">Ausbildung</p>
+      <h2 class="section-title" data-en="Educational path">Bildungsweg</h2>
       <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-period">2025</div>
+          <div class="timeline-content">
+            <div class="timeline-role">Empowering Leadership</div>
+            <div class="timeline-org">AXA Academy</div>
+          </div>
+        </div>
 
         <div class="timeline-item reveal">
           <div class="timeline-period">2019</div>
@@ -472,18 +492,11 @@
         <div class="timeline-item reveal">
           <div class="timeline-period">2004 – 2006</div>
           <div class="timeline-content">
-            <div class="timeline-role">Gestalterische Berufsmatura</div>
+            <div class="timeline-role" data-en="Creative Vocational Baccalaureate">Gestalterische Berufsmatura</div>
             <div class="timeline-org">Liechtenstein · Vaduz</div>
           </div>
         </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-period">2005</div>
-          <div class="timeline-content">
-            <div class="timeline-role">Sprachaufenthalt</div>
-            <div class="timeline-org">Toronto, Kanada</div>
-          </div>
-        </div>
 
         <div class="timeline-item reveal">
           <div class="timeline-period">2002</div>
@@ -496,7 +509,7 @@
         <div class="timeline-item reveal">
           <div class="timeline-period">1997 – 2001</div>
           <div class="timeline-content">
-            <div class="timeline-role">Eidg. dipl. Schriftgestalter</div>
+            <div class="timeline-role" data-en="Federal Dipl. Type Designer">Eidg. dipl. Schriftgestalter</div>
             <div class="timeline-org">Schule für Gestaltung · Zürich</div>
           </div>
         </div>
@@ -505,12 +518,12 @@
     </div>
 
     <div class="timeline-section reveal">
-      <p class="section-label">Nebenberufliches Engagement</p>
-      <h2 class="section-title">Ehrenamt & Mentoring</h2>
+      <p class="section-label" data-en="Volunteer work">Nebenberufliches Engagement</p>
+      <h2 class="section-title" data-en="Volunteering &amp; Mentoring">Ehrenamt &amp; Mentoring</h2>
       <div class="timeline">
 
         <div class="timeline-item reveal">
-          <div class="timeline-period">Seit 2025</div>
+          <div class="timeline-period" data-en="Since 2025">Seit 2025</div>
           <div class="timeline-content">
             <div class="timeline-role">Mentor</div>
             <div class="timeline-org">UX Schweiz · Zürich</div>
@@ -518,17 +531,17 @@
         </div>
 
         <div class="timeline-item reveal">
-          <div class="timeline-period">Seit 2021</div>
+          <div class="timeline-period" data-en="Since 2021">Seit 2021</div>
           <div class="timeline-content">
-            <div class="timeline-role">Fach- und Prüfungsexperte Intermedia Designer (IMD)</div>
+            <div class="timeline-role" data-en="Subject and Examination Expert Intermedia Designer (IMD)">Fach- und Prüfungsexperte Intermedia Designer (IMD)</div>
             <div class="timeline-org">Bern · Zürich</div>
           </div>
         </div>
 
         <div class="timeline-item reveal">
-          <div class="timeline-period">Seit 2021</div>
+          <div class="timeline-period" data-en="Since 2021">Seit 2021</div>
           <div class="timeline-content">
-            <div class="timeline-role">Junioren Trainer SFV</div>
+            <div class="timeline-role" data-en="Youth Coach SFA">Junioren Trainer SFV</div>
             <div class="timeline-org">SV Höngg · Zürich</div>
           </div>
         </div>
@@ -537,17 +550,17 @@
     </div>
 
     <div class="reveal">
-      <p class="section-label">Haltung</p>
-      <h2 class="section-title">Wofür ich stehe</h2>
+      <p class="section-label" data-en="Values">Haltung</p>
+      <h2 class="section-title" data-en="What I stand for">Wofür ich stehe</h2>
       <div class="values-strip">
-        <span class="value-chip">Klare Kommunikation</span>
-        <span class="value-chip">Eigenverantwortung</span>
-        <span class="value-chip">Pragmatismus</span>
-        <span class="value-chip">Nachhaltigkeit</span>
-        <span class="value-chip">Lernen & Anpassen</span>
-        <span class="value-chip">Integrität</span>
-        <span class="value-chip">Wirkungsorientierung</span>
-        <span class="value-chip">Kollaboration</span>
+        <span class="value-chip" data-en="Clear communication">Klare Kommunikation</span>
+        <span class="value-chip" data-en="Accountability">Eigenverantwortung</span>
+        <span class="value-chip" data-en="Pragmatism">Pragmatismus</span>
+        <span class="value-chip" data-en="Sustainability">Nachhaltigkeit</span>
+        <span class="value-chip" data-en="Learn &amp; adapt">Lernen &amp; Anpassen</span>
+        <span class="value-chip" data-en="Integrity">Integrität</span>
+        <span class="value-chip" data-en="Impact orientation">Wirkungsorientierung</span>
+        <span class="value-chip" data-en="Collaboration">Kollaboration</span>
         <span class="value-chip">Human-centered AI</span>
       </div>
     </div>
@@ -557,14 +570,14 @@
   <footer>
     <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcello</span></div></div>
     <div class="footer-grid">
-      <div class="footer-col"><div class="footer-col-label">Rechtliches</div><a href="impressum.html">Impressum & Datenschutz</a></div>
-      <div class="footer-col"><div class="footer-col-label">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">LinkedIn</a></div>
-      <div class="footer-col"><div class="footer-col-label">Kontakt</div><a href="mailto:hello@marcelrupf.com">hello@marcelrupf.com</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Legal">Rechtliches</div><a href="impressum.html" data-en="Legal Notice &amp; Privacy">Impressum &amp; Datenschutz</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Network">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">LinkedIn</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Contact">Kontakt</div><a href="mailto:hello@marcelrupf.com">hello@marcelrupf.com</a></div>
       <div class="footer-col"><div class="footer-col-label">&nbsp;</div><span style="color:rgba(255,255,255,0.35)">©2026 Marcel Rupf</span></div>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">Experience & AI Strategy Leader · Zürich · <span id="footer-time" style="font-variant-numeric:tabular-nums;">--:--</span></span>
-      <span class="footer-tag">Verfügbar für neue Projekte</span>
+      <span class="footer-tag" data-en="Available for new projects">Verfügbar für neue Projekte</span>
     </div>
   </footer>
   <a class="back-top" id="backTop" href="#"><svg viewBox="0 0 16 16"><line x1="8" y1="13" x2="8" y2="3"/><polyline points="4,7 8,3 12,7"/></svg></a>
@@ -689,5 +702,24 @@
     });
   })();
   </script>
+<script>
+(function(){
+  var KEY='mr-lang',lang=localStorage.getItem(KEY)||'de';
+  function apply(l){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(!el.getAttribute('data-de'))el.setAttribute('data-de',el.textContent);
+      el.textContent=l==='en'?el.getAttribute('data-en'):el.getAttribute('data-de');
+    });
+    document.body.classList.toggle('lang-en',l==='en');
+    document.documentElement.lang=l;
+    localStorage.setItem(KEY,l);lang=l;
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    apply(lang);
+    var btn=document.getElementById('langToggle');
+    if(btn)btn.addEventListener('click',function(){apply(lang==='de'?'en':'de');});
+  });
+})();
+</script>
 </body>
 </html>
