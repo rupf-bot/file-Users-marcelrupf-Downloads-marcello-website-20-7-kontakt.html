@@ -22,7 +22,16 @@
     body { background:var(--bg);color:var(--dark);font-family:'Instrument Sans',sans-serif;font-weight:500;-webkit-font-smoothing:antialiased;overflow-x:hidden; }
     a { color:inherit;text-decoration:none; }
     .progress-bar { position:fixed;top:0;left:0;height:2px;background:var(--accent);z-index:300;width:0%;transition:width .1s linear; }
-        .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;justify-content:space-between;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s;}
+    /* ── Language Toggle ── */
+    .nav-right{display:flex;align-items:center;gap:2rem;margin-left:auto;}
+    .lang-toggle{background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.06em;padding:0;line-height:1;color:inherit;display:flex;align-items:center;gap:.2rem;}
+    .lang-de-lbl,.lang-en-lbl{opacity:.35;transition:opacity .2s;}
+    .lang-sep-lbl{opacity:.15;}
+    body.lang-en .lang-en-lbl{opacity:1;}
+    body:not(.lang-en) .lang-de-lbl{opacity:1;}
+    @media(max-width:768px){.nav-right{position:relative;z-index:500;margin-left:auto;}.site-nav.menu-open .lang-toggle{color:#fff;}.nav-hamburger.open~.lang-toggle,.lang-toggle{color:inherit;}}
+
+        .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s;}
     .site-nav.scrolled{background:rgba(243,243,243,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,0.06);}
     .site-nav.hidden{transform:translateY(-100%);}
 
@@ -452,8 +461,11 @@
   <div class="progress-bar" id="progress"></div>
       <nav class="site-nav" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links"><li><a href="projekte.html" class="active">Projekte</a></li><li><a href="ansatz.html">Über mich</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+    <div class="nav-right">
+      <ul class="nav-links"><li><a href="projekte.html" class="active"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln"><span class="lang-de-lbl">DE</span><span class="lang-sep-lbl"> · </span><span class="lang-en-lbl">EN</span></button>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </nav>
   <div class="page-wrap">
   <div class="page-hero">
