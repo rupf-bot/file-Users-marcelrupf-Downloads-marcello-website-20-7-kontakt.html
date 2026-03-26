@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Mono:wght@0,400;0,700&display=swap" rel="stylesheet">
   <title>Impressum & Datenschutz – Marcel Rupf</title>
-  <meta name="description" content="Impressum und Datenschutzerklärung von Marcel Rupf.">
+  <meta name="description" content="Impressum und Datenschutzerklärung von marcelrupf.com – Website von Marcel Rupf, Experience & AI Strategy Leader, Zürich, Schweiz.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://marcelrupf.com/impressum.html">
   <meta property="og:title" content="Impressum & Datenschutz – Marcel Rupf">
@@ -21,12 +21,14 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_CH">
   <meta property="og:url" content="https://marcelrupf.com/impressum.html">
+  <meta property="og:image" content="https://marcelrupf.com/img/index/image-01.webp">
+  <meta property="og:image:alt" content="Marcel Rupf – marcelrupf.com">
   <style>
 
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{--accent:#737FDF;--accent-dark:#5B6CD1;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1);}
 
-    html{font-size:18px;scroll-behavior:smooth;}
+    html{font-size:18px;scroll-behavior:smooth;overflow-x:hidden;}
     /* ── Language Toggle ── */
     .nav-right{display:flex;align-items:center;gap:2rem;margin-left:auto;}
     .lang-toggle{background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.07em;text-transform:uppercase;padding:.26rem .65rem;color:inherit;display:flex;align-items:center;gap:.3rem;white-space:nowrap;opacity:.5;transition:opacity .25s;}
@@ -382,8 +384,9 @@
       .footer-bottom { flex-direction: column; gap: .5rem; align-items: flex-start; }
       footer { padding: 3rem 1.2rem 2rem; }
     }
-      
 
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
   </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Marcel Rupf","url":"https://marcelrupf.com"}
@@ -392,7 +395,7 @@
 <body>
   <div id="cursor"></div>
   <div class="progress-bar" id="progress"></div>
-    <nav class="site-nav" id="navbar">
+    <nav class="site-nav" role="navigation" aria-label="Hauptnavigation" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
     <div class="nav-right">
       <ul class="nav-links"><li><a href="projekte.html">Projekte</a></li><li><a href="ansatz.html">Über mich</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
@@ -478,7 +481,7 @@
 
   </div>
 
-<footer>
+<footer role="contentinfo">
     <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcello</span></div></div>
     <div class="footer-grid">
       <div class="footer-col"><div class="footer-col-label">Rechtliches</div><a href="impressum.html">Impressum</a><a href="impressum.html#datenschutz">Datenschutz</a></div>
