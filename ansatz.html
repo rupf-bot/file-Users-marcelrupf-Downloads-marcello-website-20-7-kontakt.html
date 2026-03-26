@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" as="image" href="img/ansatz/image-01.webp">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>M</text></svg>">
   <meta name="theme-color" content="#737FDF">
   <meta name="geo.region" content="CH-ZH">
@@ -13,23 +14,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <title>Ansatz – Marcel Rupf</title>
-  <meta name="description" content="Über Marcel Rupf – Mein Ansatz für Transformation und Produktentwicklung.">
+  <meta name="description" content="Marcel Rupfs Ansatz verbindet nutzerzentriertes Design, agile Methoden und KI-Strategie zu wirkungsvoller Transformation – pragmatisch, menschenzentriert und nachhaltig.">
   <link rel="canonical" href="https://marcelrupf.com/ansatz.html">
   <meta property="og:title" content="Ansatz – Marcel Rupf">
   <meta property="og:description" content="Mein Ansatz für Transformation und Produktentwicklung.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_CH">
   <meta property="og:url" content="https://marcelrupf.com/ansatz.html">
-  <meta property="og:image" content="https://marcelrupf.com/img/index/image-01.webp">
+  <meta property="og:image" content="https://marcelrupf.com/img/ansatz/image-01.webp">
+  <meta property="og:image:alt" content="Ansatz – Marcel Rupf">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ansatz – Marcel Rupf">
   <meta name="twitter:description" content="Mein Ansatz für Transformation und Produktentwicklung.">
-  <meta name="twitter:image" content="https://marcelrupf.com/img/index/image-01.webp">
+  <meta name="twitter:image" content="https://marcelrupf.com/img/ansatz/image-01.webp">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{--heading-font:"Instrument Sans",sans-serif;--accent:#737FDF;--accent-dark:#5B6CD1;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1);}
 
-    html{font-size:18px;scroll-behavior:smooth;}
+    html{font-size:18px;scroll-behavior:smooth;overflow-x:hidden;}
     /* ── Language Toggle ── */
     .nav-right{display:flex;align-items:center;gap:2rem;margin-left:auto;}
     .lang-toggle{background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.07em;text-transform:uppercase;padding:.26rem .65rem;color:inherit;display:flex;align-items:center;gap:.3rem;white-space:nowrap;opacity:.5;transition:opacity .25s;}
@@ -285,17 +287,22 @@
       .footer-bottom { flex-direction: column; gap: .5rem; align-items: flex-start; }
       footer { padding: 3rem 1.2rem 2rem; }
     }
-      
 
+
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
   </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Marcel Rupf","url":"https://marcelrupf.com"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://marcelrupf.com/"},{"@type":"ListItem","position":2,"name":"Über mich","item":"https://marcelrupf.com/ansatz.html"}]}
 </script>
 </head>
 <body>
   <div id="cursor"></div>
   <div class="progress-bar" id="progress"></div>
-  <nav class="site-nav" id="navbar">
+  <nav class="site-nav" role="navigation" aria-label="Hauptnavigation" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
     <div class="nav-right">
       <ul class="nav-links"><li><a href="projekte.html"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html" class="active"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
@@ -584,7 +591,7 @@
 
   </div>
 
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcello</span></div></div>
     <div class="footer-grid">
       <div class="footer-col"><div class="footer-col-label" data-en="Legal">Rechtliches</div><a href="impressum.html" data-en="Legal Notice &amp; Privacy">Impressum &amp; Datenschutz</a></div>

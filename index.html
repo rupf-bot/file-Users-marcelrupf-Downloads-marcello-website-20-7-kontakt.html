@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" as="image" href="img/index/image-01.webp">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>M</text></svg>">
   <meta name="theme-color" content="#737FDF">
   <meta name="geo.region" content="CH-ZH">
@@ -13,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Mono:wght@0,400;0,700&display=swap" rel="stylesheet">
   <title>Marcel Rupf – Transformations Manager & Produktentwickler</title>
-  <meta name="description" content="Marcel Rupf – Transformations Manager und Produktentwickler aus Zürich. Strategie, digitale Transformation und Produktentwicklung.">
+  <meta name="description" content="Marcel Rupf – Experience & AI Strategy Leader in Zürich. Transformation, Produktentwicklung und KI-Strategie mit nachgewiesenem Impact in komplexen Organisationen.">
   <link rel="canonical" href="https://marcelrupf.com/">
   <meta property="og:title" content="Marcel Rupf – Transformations Manager & Produktentwickler">
   <meta property="og:description" content="Strategie, digitale Transformation und Produktentwicklung aus Zürich.">
@@ -21,6 +22,7 @@
   <meta property="og:locale" content="de_CH">
   <meta property="og:url" content="https://marcelrupf.com/">
   <meta property="og:image" content="https://marcelrupf.com/img/index/image-01.webp">
+  <meta property="og:image:alt" content="Marcel Rupf – Experience & AI Strategy Leader">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Marcel Rupf – Transformations Manager & Produktentwickler">
   <meta name="twitter:description" content="Strategie, digitale Transformation und Produktentwicklung aus Zürich.">
@@ -57,7 +59,7 @@
       --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    html { font-size: 18px; scroll-behavior: smooth; }
+    html { font-size: 18px; scroll-behavior: smooth; overflow-x: hidden; }
 
     h1, h2, h3 {
       font-family: var(--heading-font), Georgia, serif;
@@ -487,6 +489,8 @@
       footer { padding: 3rem 1.2rem 2rem; }
     }
 
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
   </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Marcel Rupf","url":"https://marcelrupf.com"}
@@ -497,7 +501,7 @@
 
   <div class="progress-bar" id="progress"></div>
 
-      <nav class="site-nav" id="navbar">
+      <nav class="site-nav" role="navigation" aria-label="Hauptnavigation" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
     <div class="nav-right">
       <ul class="nav-links"><li><a href="projekte.html"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
@@ -575,7 +579,7 @@
   </section>
 
   <!-- ── FOOTER ── -->
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcello</span></div></div>
     <div class="footer-grid">
       <div class="footer-col"><div class="footer-col-label" data-en="Legal">Rechtliches</div><a href="impressum.html" data-en="Legal Notice &amp; Privacy">Impressum &amp; Datenschutz</a></div>
