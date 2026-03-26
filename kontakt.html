@@ -186,10 +186,12 @@
     .contact-actions { display:flex;flex-direction:column;gap:.75rem;margin-bottom:3rem; }
     .contact-btn { display:flex;align-items:center;gap:.75rem;padding:1rem 1.4rem;border-radius:.6rem;font-size:.9rem;font-weight:600;letter-spacing:-.01em;transition:background .25s,color .25s,border-color .25s;border:none;cursor:pointer; }
     .contact-btn svg { width:18px;height:18px;flex-shrink:0; }
-    .btn-primary { background:#fff;color:#131217; }
-    .btn-primary:hover { background:#e8d5ff; color:#131217; }
-    .btn-secondary, .btn-ghost { background:#fff;border:1px solid #fff;color:#131217; }
-    .btn-secondary:hover, .btn-ghost:hover { background:#e8d5ff; color:#131217; }
+    .btn-primary { background:#fff;color:var(--accent); }
+    .btn-primary:hover { background:#f0efff;color:var(--accent-dark); }
+    .btn-secondary { background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.5);color:#fff; }
+    .btn-secondary:hover { background:rgba(255,255,255,0.28);border-color:#fff; }
+    .btn-ghost { background:transparent;border:1px solid rgba(255,255,255,0.5);color:#fff; }
+    .btn-ghost:hover { background:rgba(255,255,255,0.15);border-color:#fff; }
 
     .topics-label { font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:.75rem; }
     .topics-list { display:flex;flex-wrap:wrap;gap:.4rem; }
@@ -388,11 +390,6 @@
     <div class="contact-layout">
 
       <div class="reveal-left">
-        <div class="contact-avail">
-          <span class="avail-dot"></span>
-          <span class="avail-text" data-en="Available for new mandates">Verfügbar für neue Mandate</span>
-        </div>
-
         <div class="contact-info-block">
           <div class="contact-info-label" data-en="Location">Standort</div>
           <div class="contact-info-value">Zürich, Schweiz</div>
