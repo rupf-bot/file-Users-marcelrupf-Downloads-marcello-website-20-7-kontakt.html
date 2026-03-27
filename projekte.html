@@ -419,6 +419,9 @@
       }
       .nav-links.open { display: flex; }
       .nav-links li { list-style: none; }
+      .nav-links .nav-home-item { margin-bottom:1rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,0.1);width:100%;text-align:center; }
+      .nav-links .nav-home-item a { font-size:1.8rem !important;font-weight:600 !important;color:#fff !important;letter-spacing:-.02em !important;-webkit-tap-highlight-color:transparent; }
+      .nav-links .nav-home-item a:hover,.nav-links .nav-home-item a.touched { color:var(--accent) !important; }
       /* Normale Nav-Links */
       .nav-links a {
         font-size: 1.5rem !important;
@@ -495,7 +498,7 @@
       <nav class="site-nav" role="navigation" aria-label="Hauptnavigation" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
     <div class="nav-right">
-      <ul class="nav-links"><li><a href="projekte.html" class="active"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
+      <ul class="nav-links"><li class="nav-home-item"><a href="index.html">Marcello</a></li><li><a href="projekte.html" class="active"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
       <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln"><span class="lang-de-lbl">DE</span><span class="lang-sep-lbl"> · </span><span class="lang-en-lbl">EN</span></button>
       <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
