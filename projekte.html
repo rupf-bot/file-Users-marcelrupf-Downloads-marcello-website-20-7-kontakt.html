@@ -777,6 +777,7 @@
               <img loading="lazy" src="img/projekt-08/slide-02.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 2" />
               <img loading="lazy" src="img/projekt-08/slide-03.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 3" />
               <img loading="lazy" src="img/projekt-08/slide-04.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 4" />
+              <img loading="lazy" src="img/projekt-08/slide-05.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 5" />
             </div>
             <button onclick="stSlide(-1)" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Zurück">&#8592;</button>
             <button onclick="stSlide(1)" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Weiter">&#8594;</button>
@@ -785,6 +786,7 @@
               <span id="stDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(1)"></span>
               <span id="stDot2" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(2)"></span>
               <span id="stDot3" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(3)"></span>
+              <span id="stDot4" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(4)"></span>
             </div>
           </div>
           <div class="proj-detail-text">
@@ -936,7 +938,7 @@
   (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('scTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('scDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.scSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.scSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('postTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('postDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.postSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.postSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('sgkbTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('sgkbDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.sgkbSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.sgkbSlideTo=function(i){cur=i;upd();};})();
-  (function(){var cur=0,tot=4;function upd(){var t=document.getElementById('stTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('stDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.stSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.stSlideTo=function(i){cur=i;upd();};})();
+  (function(){var cur=0,tot=5;function upd(){var t=document.getElementById('stTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('stDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.stSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.stSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('svgwTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('svgwDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.svgwSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.svgwSlideTo=function(i){cur=i;upd();};})();
 </script>
     <script>
