@@ -104,7 +104,6 @@
     .nav-left{display:flex;align-items:baseline;gap:.6rem;}
 
     .nav-links{display:flex;gap:2rem;list-style:none;}
-    .nav-links .nav-home-item{display:none;}
     .nav-links a{font-weight:600;font-size:.88rem;color:#fff;transition:color .25s;pointer-events:auto;cursor:pointer!important;}
     .nav-links a:hover{color:var(--accent);}
 
@@ -448,9 +447,6 @@
       }
       .nav-links.open { display: flex; }
       .nav-links li { list-style: none; }
-      .nav-links .nav-home-item { display:block;position:absolute;top:.9rem;left:1.2rem;margin:0;padding:0;border:none;width:auto;text-align:left; }
-      .nav-links .nav-home-item a { font-size:1.05rem !important;font-weight:600 !important;color:#fff !important;letter-spacing:-.01em !important;padding:0 !important;-webkit-tap-highlight-color:transparent; }
-      .nav-links .nav-home-item a:hover,.nav-links .nav-home-item a.touched { color:var(--accent) !important; }
       /* Normale Nav-Links */
       .nav-links a {
         font-size: 1.5rem !important;
@@ -508,7 +504,7 @@
       <nav class="site-nav" role="navigation" aria-label="Hauptnavigation" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
     <div class="nav-right">
-      <ul class="nav-links"><li class="nav-home-item"><a href="index.html">Marcello</a></li><li><a href="projekte.html"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
+      <ul class="nav-links"><li><a href="projekte.html"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
       <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln"><span class="lang-de-lbl">DE</span><span class="lang-sep-lbl"> · </span><span class="lang-en-lbl">EN</span></button>
       <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
