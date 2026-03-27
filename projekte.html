@@ -661,23 +661,42 @@
           </div>
         </div>
       </div>
-      <div class="proj-item reveal delay-2" style="grid-column:span 6;">
+      <div class="proj-item reveal" style="grid-column:span 6;">
         <div class="proj-detail-card">
-          <img loading="lazy" src="img/projekt-03/slide-01.webp" class="proj-detail-img" alt="myclimate – Usability Testing" />
+          <div class="proj-slider">
+            <div class="proj-slider-track" id="stTrack">
+              <img loading="lazy" src="img/projekt-08/slide-01.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 1" />
+              <img loading="lazy" src="img/projekt-08/slide-02.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 2" />
+              <img loading="lazy" src="img/projekt-08/slide-03.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 3" />
+              <img loading="lazy" src="img/projekt-08/slide-04.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 4" />
+              <img loading="lazy" src="img/projekt-08/slide-05.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 5" />
+            </div>
+            <button onclick="stSlide(-1)" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Zurück">&#8592;</button>
+            <button onclick="stSlide(1)" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Weiter">&#8594;</button>
+            <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
+              <span id="stDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="stSlideTo(0)"></span>
+              <span id="stDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(1)"></span>
+              <span id="stDot2" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(2)"></span>
+              <span id="stDot3" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(3)"></span>
+              <span id="stDot4" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(4)"></span>
+            </div>
+          </div>
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 05</div>
-            <h2 class="proj-detail-title">Stiftung myclimate –<br>Usability Testing</h2>
-            <p class="proj-detail-lead" data-en="Overall professional responsibility for usability testing of the website — from conception to recommended actions.">Fachliche Gesamtverantwortung für das Usability-Testing der Website — von der Konzeption bis zur Massnahmenempfehlung.</p>
+            <h2 class="proj-detail-title">STIEBEL ELTRON AG –<br>Digitale Beratungsplattform im Vertrieb</h2>
+            <p class="proj-detail-lead" data-en="For the international heat pump manufacturer Stiebel Eltron, I designed a digital platform that makes sales processes more efficient and customer-oriented.">Für den internationalen Wärmepumpenhersteller Stiebel Eltron habe ich eine digitale Plattform konzipiert, die Vertriebsprozesse effizienter und kundenorientierter gestaltet.</p>
             <div class="proj-detail-body">
-              <p data-en="Development of the test guide in close collaboration with the client, recruitment and coordination of test users, test facilitation and evaluation. Presentation of a concrete package of measures with prioritised improvement recommendations to the project leads.">Entwicklung des Testleitfadens in enger Zusammenarbeit mit dem Kunden, Rekrutierung und Koordination von Testnutzern, Testleitung und Auswertung. Präsentation eines konkreten Massnahmenpakets mit priorisierten Verbesserungsempfehlungen an die Projektverantwortlichen.</p>
+              <p data-en="The app presents complex product information interactively and enables sales staff to advise customers in a targeted way. Technical data sheets can be sent electronically directly. The solution increases efficiency in the sales process, improves the customer experience and creates a scalable digital interface between the product portfolio and consulting practice.">Die App bereitet komplexe Produktinformationen interaktiv auf und ermöglicht Vertriebsmitarbeitenden, Kunden gezielt zu beraten. Technische Datenblätter können direkt elektronisch versendet werden. Die Lösung steigert die Effizienz im Verkaufsprozess, verbessert die Kundenerfahrung und schafft eine skalierbare digitale Schnittstelle zwischen Produktportfolio und Beratungspraxis.</p>
             </div>
             <div class="proj-detail-tags">
-              <span class="proj-tag">myclimate</span>
-              <span class="proj-tag">evux ag</span>
-              <span class="proj-tag">Usability Testing</span>
-              <span class="proj-tag" data-en="Test facilitation">Testleitung</span>
-              <span class="proj-tag" data-en="Recommendations">Handlungsempfehlungen</span>
-              <span class="proj-tag">2019</span>
+              <span class="proj-tag">Stiebel Eltron</span>
+              <span class="proj-tag">iPad App</span>
+              <span class="proj-tag" data-en="Digital Brochure">Digitale Broschüre</span>
+              <span class="proj-tag" data-en="Sales Tool">Verkaufstool</span>
+              <span class="proj-tag" data-en="Interactive">Interaktiv</span>
+              <span class="proj-tag" data-en="Heat Pump">Wärmepumpe</span>
+              <span class="proj-tag">UX</span>
+              <span class="proj-tag">2016</span>
             </div>
           </div>
         </div>
@@ -716,42 +735,23 @@
           </div>
         </div>
       </div>
-      <div class="proj-item reveal" style="grid-column:span 6;">
+      <div class="proj-item reveal delay-2" style="grid-column:span 6;">
         <div class="proj-detail-card">
-          <div class="proj-slider">
-            <div class="proj-slider-track" id="stTrack">
-              <img loading="lazy" src="img/projekt-08/slide-01.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 1" />
-              <img loading="lazy" src="img/projekt-08/slide-02.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 2" />
-              <img loading="lazy" src="img/projekt-08/slide-03.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 3" />
-              <img loading="lazy" src="img/projekt-08/slide-04.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 4" />
-              <img loading="lazy" src="img/projekt-08/slide-05.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 5" />
-            </div>
-            <button onclick="stSlide(-1)" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Zurück">&#8592;</button>
-            <button onclick="stSlide(1)" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Weiter">&#8594;</button>
-            <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
-              <span id="stDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="stSlideTo(0)"></span>
-              <span id="stDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(1)"></span>
-              <span id="stDot2" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(2)"></span>
-              <span id="stDot3" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(3)"></span>
-              <span id="stDot4" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(4)"></span>
-            </div>
-          </div>
+          <img loading="lazy" src="img/projekt-03/slide-01.webp" class="proj-detail-img" alt="myclimate – Usability Testing" />
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 07</div>
-            <h2 class="proj-detail-title">STIEBEL ELTRON AG –<br>Digitale Beratungsplattform im Vertrieb</h2>
-            <p class="proj-detail-lead" data-en="For the international heat pump manufacturer Stiebel Eltron, I designed a digital platform that makes sales processes more efficient and customer-oriented.">Für den internationalen Wärmepumpenhersteller Stiebel Eltron habe ich eine digitale Plattform konzipiert, die Vertriebsprozesse effizienter und kundenorientierter gestaltet.</p>
+            <h2 class="proj-detail-title">Stiftung myclimate –<br>Usability Testing</h2>
+            <p class="proj-detail-lead" data-en="Overall professional responsibility for usability testing of the website — from conception to recommended actions.">Fachliche Gesamtverantwortung für das Usability-Testing der Website — von der Konzeption bis zur Massnahmenempfehlung.</p>
             <div class="proj-detail-body">
-              <p data-en="The app presents complex product information interactively and enables sales staff to advise customers in a targeted way. Technical data sheets can be sent electronically directly. The solution increases efficiency in the sales process, improves the customer experience and creates a scalable digital interface between the product portfolio and consulting practice.">Die App bereitet komplexe Produktinformationen interaktiv auf und ermöglicht Vertriebsmitarbeitenden, Kunden gezielt zu beraten. Technische Datenblätter können direkt elektronisch versendet werden. Die Lösung steigert die Effizienz im Verkaufsprozess, verbessert die Kundenerfahrung und schafft eine skalierbare digitale Schnittstelle zwischen Produktportfolio und Beratungspraxis.</p>
+              <p data-en="Development of the test guide in close collaboration with the client, recruitment and coordination of test users, test facilitation and evaluation. Presentation of a concrete package of measures with prioritised improvement recommendations to the project leads.">Entwicklung des Testleitfadens in enger Zusammenarbeit mit dem Kunden, Rekrutierung und Koordination von Testnutzern, Testleitung und Auswertung. Präsentation eines konkreten Massnahmenpakets mit priorisierten Verbesserungsempfehlungen an die Projektverantwortlichen.</p>
             </div>
             <div class="proj-detail-tags">
-              <span class="proj-tag">Stiebel Eltron</span>
-              <span class="proj-tag">iPad App</span>
-              <span class="proj-tag" data-en="Digital Brochure">Digitale Broschüre</span>
-              <span class="proj-tag" data-en="Sales Tool">Verkaufstool</span>
-              <span class="proj-tag" data-en="Interactive">Interaktiv</span>
-              <span class="proj-tag" data-en="Heat Pump">Wärmepumpe</span>
-              <span class="proj-tag">UX</span>
-              <span class="proj-tag">2016</span>
+              <span class="proj-tag">myclimate</span>
+              <span class="proj-tag">evux ag</span>
+              <span class="proj-tag">Usability Testing</span>
+              <span class="proj-tag" data-en="Test facilitation">Testleitung</span>
+              <span class="proj-tag" data-en="Recommendations">Handlungsempfehlungen</span>
+              <span class="proj-tag">2019</span>
             </div>
           </div>
         </div>
