@@ -272,6 +272,8 @@
       line-height: 1.1;
       color: var(--dark);
       margin-bottom: 1rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .proj-detail-lead {
       font-size: 1rem;
@@ -559,8 +561,8 @@
           <img loading="lazy" src="img/projekt-ai-agent/slide-01.webp" class="proj-detail-img" alt="Personal AI Assistant – Architektur" />
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 02</div>
-            <h2 class="proj-detail-title">Personal AI Assistant</h2>
-            <p class="proj-detail-lead" data-en="A personalised AI assistant built on Claude Code — contextualised to the role, knowledge base and working style of a UX strategist.">Ein personalisierter AI-Assistent, gebaut auf Claude Code — kontextualisiert auf Rolle, Wissensbasis und Arbeitsweise eines UX-Strategen.</p>
+            <h2 class="proj-detail-title" data-de="Personalisierter AI-Assistent" data-en="Personalised AI Assistant">Personalisierter AI-Assistent</h2>
+            <p class="proj-detail-lead" data-en="A personalised AI assistant, built on Claude Code — contextualised to my role, knowledge base and way of working as a UX strategist, leader and organisational developer.">Ein personalisierter AI-Assistent, gebaut auf Claude Code — kontextualisiert auf Rolle, Wissensbasis und Arbeitsweise von mir als UX-Stratege, Führungsperson und Organisationsentwickler.</p>
             <div class="proj-detail-body">
               <p data-en="Generic AI tools know no context. Every conversation starts from zero. In response to this, I built an assistant that truly knows my working day: my role at AXA, my stakeholders, ongoing initiatives and a curated knowledge base from NNGroup to Kahneman, from Gartner to McKinsey Design. In practice this means: stakeholder documents are created with the right framing, UX frameworks are translated directly into business language, LinkedIn posts and portfolio cases follow my structure — without having to explain from scratch every time who I am and how I think. The assistant picks up where the last conversation left off. This not only saves time — it raises the quality of every decision I prepare.">Generische AI-Tools kennen keinen Kontext. Jedes Gespräch beginnt bei null. Als Antwort darauf habe ich einen Assistenten aufgebaut, der meinen Arbeitsalltag wirklich kennt: meine Rolle bei AXA, meine Stakeholder, laufende Initiativen und eine kuratierte Wissensbasis von NNGroup bis Kahneman, von Gartner bis McKinsey Design. Im Alltag bedeutet das: Stakeholder-Dokumente entstehen im richtigen Framing, UX-Frameworks werden direkt in Business-Sprache übersetzt, LinkedIn-Posts und Portfolio-Cases folgen meiner Struktur — ohne dass ich jedes Mal von vorne erklären muss, wer ich bin und wie ich denke. Der Assistent macht dort weiter, wo das letzte Gespräch aufgehört hat. Das spart nicht nur Zeit — es erhöht die Qualität jeder Entscheidung, die ich vorbereite.</p>
             </div>
@@ -597,42 +599,6 @@
               <span class="proj-tag">Standards</span>
               <span class="proj-tag">Nielsen Norman</span>
               <span class="proj-tag">2023–2026</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="proj-item reveal delay-2" style="grid-column:span 6;">
-        <div class="proj-detail-card">
-          <div class="proj-slider">
-            <div id="axTrack" class="proj-slider-track">
-              <img loading="lazy" src="img/projekt-axa-summit/slide-01.webp" class="proj-slide" alt="AXA UX Summit – Bild 1" />
-              <img loading="lazy" src="img/projekt-axa-summit/slide-02.webp" class="proj-slide" alt="AXA UX Summit – Bild 2" />
-              <img loading="lazy" src="img/projekt-axa-summit/slide-03.webp" class="proj-slide" alt="AXA UX Summit – Bild 3" />
-            </div>
-            <button onclick="axSlide(-1)" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
-            <button onclick="axSlide(1)" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
-            <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
-              <span id="axDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="axSlideTo(0)"></span>
-              <span id="axDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="axSlideTo(1)"></span>
-              <span id="axDot2" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="axSlideTo(2)"></span>
-            </div>
-          </div>
-          <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 02</div>
-            <h2 class="proj-detail-title">Personalisierter<br>AI-Assistent</h2>
-            <p class="proj-detail-lead" data-en="A personalised AI assistant, built on Claude Code — contextualised to my role, knowledge base and way of working as a UX strategist, leader and organisational developer.">Ein personalisierter AI-Assistent, gebaut auf Claude Code — kontextualisiert auf Rolle, Wissensbasis und Arbeitsweise von mir als UX-Stratege, Führungsperson und Organisationsentwickler.</p>
-            <div class="proj-detail-body">
-              <p data-en="A personalised AI assistant, built on Claude Code — contextualised to my role, knowledge base and way of working as a UX strategist, leader and organisational developer.">Ein personalisierter AI-Assistent, gebaut auf Claude Code — kontextualisiert auf Rolle, Wissensbasis und Arbeitsweise von mir als UX-Stratege, Führungsperson und Organisationsentwickler.</p>
-            </div>
-            <div class="proj-detail-tags">
-              <span class="proj-tag">Claude Code</span>
-              <span class="proj-tag">AI-Assistent</span>
-              <span class="proj-tag" data-en="Personalisation">Personalisierung</span>
-              <span class="proj-tag">Knowledge Base</span>
-              <span class="proj-tag">Prompt Engineering</span>
-              <span class="proj-tag">GenAI</span>
-              <span class="proj-tag">2026</span>
             </div>
           </div>
         </div>
