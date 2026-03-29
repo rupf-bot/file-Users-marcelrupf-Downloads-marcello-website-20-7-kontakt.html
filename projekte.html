@@ -3,22 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23737FDF'/><text x='50' y='72' font-size='62' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'>M</text></svg>">
+  <meta name="theme-color" content="#737FDF">
+  <meta name="geo.region" content="CH-ZH">
+  <meta name="geo.placename" content="Zürich, Schweiz">
+  <meta name="geo.position" content="47.3769;8.5417">
+  <meta name="ICBM" content="47.3769, 8.5417">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <title>Projekte – Marcel Rupf</title>
-  <meta name="description" content="Ausgewählte Projekte von Marcel Rupf – Transformation, Strategie und Produktentwicklung.">
+  <meta name="description" content="Ausgewählte Transformationsprojekte von Marcel Rupf – von der strategischen Konzeption bis zur operativen Umsetzung in Unternehmen wie AXA, Swisscom und Post CH.">
   <link rel="canonical" href="https://marcelrupf.com/projekte.html">
   <meta property="og:title" content="Projekte – Marcel Rupf">
   <meta property="og:description" content="Ausgewählte Projekte von Marcel Rupf – Transformation und Produktentwicklung.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_CH">
   <meta property="og:url" content="https://marcelrupf.com/projekte.html">
-  <meta property="og:image" content="https://marcelrupf.com/img/index/image-01.webp">
+  <meta property="og:image" content="https://marcelrupf.com/img/projekt-00/slide-01.webp">
+  <meta property="og:image:alt" content="Projekte – Marcel Rupf">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Projekte – Marcel Rupf">
   <meta name="twitter:description" content="Ausgewählte Projekte von Marcel Rupf – Transformation und Produktentwicklung.">
-  <meta name="twitter:image" content="https://marcelrupf.com/img/index/image-01.webp">
+  <meta name="twitter:image" content="https://marcelrupf.com/img/projekt-00/slide-01.webp">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --heading-font:"Instrument Sans",sans-serif;--accent:#737FDF;--accent-dark:#5B6CD1;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1); }
@@ -472,12 +479,20 @@
         box-sizing: border-box;
       }
     }
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
   </style>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Marcel Rupf","url":"https://marcelrupf.com"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://marcelrupf.com/"},{"@type":"ListItem","position":2,"name":"Projekte","item":"https://marcelrupf.com/projekte.html"}]}
+</script>
 </head>
 <body>
   <div id="cursor"></div>
   <div class="progress-bar" id="progress"></div>
-      <nav class="site-nav" id="navbar">
+      <nav class="site-nav" role="navigation" aria-label="Hauptnavigation" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
     <div class="nav-right">
       <ul class="nav-links"><li><a href="projekte.html" class="active"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
@@ -485,7 +500,7 @@
       <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
-  <div class="page-wrap">
+  <main class="page-wrap" role="main">
   <div class="page-hero">
     <p class="page-eyebrow reveal" data-en="Selected work">Ausgewählte Arbeit</p>
     <h1 class="page-title reveal delay-1" data-en="Projects">Projekte</h1>
@@ -536,6 +551,54 @@
             </div>
           </div>
 
+        </div>
+      </div>
+
+      <div class="proj-item reveal delay-2" style="grid-column:span 6;">
+        <div class="proj-detail-card">
+          <img loading="lazy" src="img/projekt-ai-agent/slide-01.webp" class="proj-detail-img" alt="Personal AI Assistant – Architektur" />
+          <div class="proj-detail-text">
+            <div class="proj-detail-eyebrow">Projekt 02</div>
+            <h2 class="proj-detail-title">Personal AI Assistant</h2>
+            <p class="proj-detail-lead" data-en="A personalised AI assistant built on Claude Code — contextualised to the role, knowledge base and working style of a UX strategist.">Ein personalisierter AI-Assistent, gebaut auf Claude Code — kontextualisiert auf Rolle, Wissensbasis und Arbeitsweise eines UX-Strategen.</p>
+            <div class="proj-detail-body">
+              <p data-en="Generic AI tools know no context. Every conversation starts from zero. In response to this, I built an assistant that truly knows my working day: my role at AXA, my stakeholders, ongoing initiatives and a curated knowledge base from NNGroup to Kahneman, from Gartner to McKinsey Design. In practice this means: stakeholder documents are created with the right framing, UX frameworks are translated directly into business language, LinkedIn posts and portfolio cases follow my structure — without having to explain from scratch every time who I am and how I think. The assistant picks up where the last conversation left off. This not only saves time — it raises the quality of every decision I prepare.">Generische AI-Tools kennen keinen Kontext. Jedes Gespräch beginnt bei null. Als Antwort darauf habe ich einen Assistenten aufgebaut, der meinen Arbeitsalltag wirklich kennt: meine Rolle bei AXA, meine Stakeholder, laufende Initiativen und eine kuratierte Wissensbasis von NNGroup bis Kahneman, von Gartner bis McKinsey Design. Im Alltag bedeutet das: Stakeholder-Dokumente entstehen im richtigen Framing, UX-Frameworks werden direkt in Business-Sprache übersetzt, LinkedIn-Posts und Portfolio-Cases folgen meiner Struktur — ohne dass ich jedes Mal von vorne erklären muss, wer ich bin und wie ich denke. Der Assistent macht dort weiter, wo das letzte Gespräch aufgehört hat. Das spart nicht nur Zeit — es erhöht die Qualität jeder Entscheidung, die ich vorbereite.</p>
+            </div>
+            <div class="proj-detail-tags">
+              <span class="proj-tag" data-en="Side Project">Side Project</span>
+              <span class="proj-tag">GenAI</span>
+              <span class="proj-tag" data-en="AI Strategy">AI Strategy</span>
+              <span class="proj-tag" data-en="UX Strategy">UX Strategy</span>
+              <span class="proj-tag">ClaudeCode</span>
+              <span class="proj-tag" data-en="Prompt Engineering">Prompt Engineering</span>
+              <span class="proj-tag" data-en="Knowledge Architecture">Knowledge Architecture</span>
+              <span class="proj-tag">LLM</span>
+              <span class="proj-tag">2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-item reveal delay-2" style="grid-column:span 6;">
+        <div class="proj-detail-card">
+          <img loading="lazy" src="img/projekt-axa-ux/slide-01.webp" class="proj-detail-img" alt="AXA Schweiz – Stages of UX Maturity" />
+          <div class="proj-detail-text">
+            <div class="proj-detail-eyebrow">Projekt 03</div>
+            <h2 class="proj-detail-title">AXA Schweiz –<br>UX-Reife Level 4</h2>
+            <p class="proj-detail-lead" data-en="Assessment of UX maturity and systematic advancement from level 3 («Emergent») to level 4 («Structured») according to the Nielsen Norman UX maturity model — through eight standards, formal governance and an optimised organisational structure.">Erhebung der UX-Reife und systematische Steigerung von Level 3 auf Level 4 nach dem Nielsen Norman UX-Maturity-Modell — durch acht Standards, eine formale Governance und eine optimierte Organisationsstruktur.</p>
+            <div class="proj-detail-body">
+              <p data-en="Based on the assessment, I developed and implemented eight central UX standards for consistent methods in user research, design and validation. In parallel, a formal governance structure was established with clearly defined responsibilities, decision-making processes and data-driven review mechanisms. The organisational structure of UX teams was optimised, interfaces to product, IT and business units strengthened, and cross-functional collaboration promoted. Our goal: to systematically integrate UX into products, services and product teams — with decisions made transparently on the basis of user data in the future.">Auf Grundlage der Erhebung entwickelte und implementierte ich acht zentrale UX-Standards für konsistente Methoden in Nutzerforschung, Design und Validierung. Parallel wurde eine formale Governance-Struktur mit klar definierten Verantwortlichkeiten, Entscheidungsprozessen und datenbasierten Review-Mechanismen etabliert. Die Organisationsstruktur der UX-Teams wurde optimiert, Schnittstellen zu Produkt, IT und Fachbereichen gestärkt sowie Cross-Functional Collaboration gefördert. Unser Ziel: UX systematisch in Produkte, Services und Produktteams zu integrieren — Entscheidungen werden zukünftig nachvollziehbar auf Basis von Nutzerdaten getroffen.</p>
+            </div>
+            <div class="proj-detail-tags">
+              <span class="proj-tag">AXA Schweiz</span>
+              <span class="proj-tag">Head UX</span>
+              <span class="proj-tag">UX-Maturity</span>
+              <span class="proj-tag">Governance</span>
+              <span class="proj-tag">Standards</span>
+              <span class="proj-tag">Nielsen Norman</span>
+              <span class="proj-tag">2023–2026</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -592,7 +655,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 03</div>
+            <div class="proj-detail-eyebrow">Projekt 05</div>
             <h2 class="proj-detail-title">Swisscom –<br>Redesign B2B Website</h2>
             <p class="proj-detail-lead" data-en="As a key UX driver in Swisscom's B2B area — conception and implementation of a comprehensive redesign, introduction of agile SAFe methods, and active involvement in merging two project teams.">Als massgeblicher UX-Treiber im B2B-Bereich der Swisscom — Konzeption und Umsetzung eines umfassenden Redesigns, Einführung agiler SAFe-Methoden sowie aktive Mitgestaltung der Zusammenführung zweier Projektteams.</p>
             <div class="proj-detail-body">
@@ -628,41 +691,61 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 04</div>
-            <h2 class="proj-detail-title">Post CH AG –<br>Usability &amp; Expert Review</h2>
-            <p class="proj-detail-lead" data-en="Expert review of the Pick@home app as well as concept and usability testing of the digital shipping assistant.">Expert Review der Pick@home App sowie Konzept und Usability Testing des digitalen Versandassistenten.</p>
+            <div class="proj-detail-eyebrow">Projekt 06</div>
+            <h2 class="proj-detail-title">Post CH AG –<br>Konzernjourney & Mystery Shopping</h2>
+            <p class="proj-detail-lead" data-en="Visualisation of design thinking results and prototyping in the corporate journey workshop — plus planning and conducting mystery shopping for the digital shipping assistant.">Visualisierung von Design-Thinking-Ergebnissen und Prototyping im Konzernjourney-Workshop — sowie Planung und Durchführung von Mystery Shopping für den digitalen Versandassistenten.</p>
             <div class="proj-detail-body">
-              <p data-en="Analysis of the existing app according to ISO heuristics (Norman/Nielsen), derivation of concrete recommendations and consulting for stakeholders and project management. In a second project: visualisation of design thinking results as an Axure prototype, conducting usability tests as moderator, as well as storyboard development and word café workshops.">Analyse der bestehenden App nach ISO-Heuristiken (Norman/Nielsen), Ableitung konkreter Handlungsempfehlungen und Beratung von Stakeholdern und Projektleitung. In einem zweiten Projekt: Visualisierung von Design-Thinking-Ergebnissen als Axure-Prototyp, Durchführung von Usability Tests als Moderator sowie Storyboardentwicklung und Wordcafé-Workshops.</p>
+              <p data-en="In the corporate journey project, I supported the internal project team in visualising design thinking results as a prototype, refined it in close coordination with the team, and conducted the usability test as moderator — including evaluation and formulation of improvement potential for both physical and digital prototype. Additionally, I developed storyboards and facilitated discussion workshops in a word café format.">Im Konzernjourney-Projekt unterstützte ich das interne Projektteam bei der Visualisierung der Ergebnisse aus dem Design-Thinking-Vorgehen. Ich setzte den Prototyp um, verfeinerte ihn in enger Abstimmung mit dem Team und führte den Usability Test als Moderator durch — inklusive Auswertung und Formulierung von Verbesserungspotenzialen für physischen und digitalen Prototyp. Ergänzend übernahm ich die Storyboardentwicklung sowie die Moderation von Diskussionsworkshops im Wordcafé-Format.</p>
             </div>
             <div class="proj-detail-tags">
               <span class="proj-tag">Post CH AG</span>
               <span class="proj-tag">evux ag</span>
-              <span class="proj-tag">Expert Review</span>
-              <span class="proj-tag">Usability Testing</span>
+              <span class="proj-tag">Mystery Shopping</span>
+              <span class="proj-tag">Konzernjourney</span>
+              <span class="proj-tag">Storyboarding</span>
               <span class="proj-tag">Prototyping</span>
-              <span class="proj-tag">Design Thinking</span>
+              <span class="proj-tag">Usability Testing</span>
               <span class="proj-tag">2018–2019</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="proj-item reveal delay-2" style="grid-column:span 6;">
+      <div class="proj-item reveal" style="grid-column:span 6;">
         <div class="proj-detail-card">
-          <img loading="lazy" src="img/projekt-03/slide-01.webp" class="proj-detail-img" alt="myclimate – Usability Testing" />
+          <div class="proj-slider">
+            <div class="proj-slider-track" id="stTrack">
+              <img loading="lazy" src="img/projekt-08/slide-02.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 1" />
+              <img loading="lazy" src="img/projekt-08/slide-01.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 2" />
+              <img loading="lazy" src="img/projekt-08/slide-03.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 3" />
+              <img loading="lazy" src="img/projekt-08/slide-04.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 4" />
+              <img loading="lazy" src="img/projekt-08/slide-05.webp" class="proj-slide" alt="Stiebel Eltron App – Bild 5" />
+            </div>
+            <button onclick="stSlide(-1)" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Zurück">&#8592;</button>
+            <button onclick="stSlide(1)" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Weiter">&#8594;</button>
+            <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
+              <span id="stDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="stSlideTo(0)"></span>
+              <span id="stDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(1)"></span>
+              <span id="stDot2" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(2)"></span>
+              <span id="stDot3" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(3)"></span>
+              <span id="stDot4" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="stSlideTo(4)"></span>
+            </div>
+          </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 05</div>
-            <h2 class="proj-detail-title">Stiftung myclimate –<br>Usability Testing</h2>
-            <p class="proj-detail-lead" data-en="Overall professional responsibility for usability testing of the website — from conception to recommended actions.">Fachliche Gesamtverantwortung für das Usability-Testing der Website — von der Konzeption bis zur Massnahmenempfehlung.</p>
+            <div class="proj-detail-eyebrow">Projekt 07</div>
+            <h2 class="proj-detail-title">STIEBEL ELTRON AG –<br>Digitale Beratungsplattform im Vertrieb</h2>
+            <p class="proj-detail-lead" data-en="For the international heat pump manufacturer Stiebel Eltron, I designed a digital platform that makes sales processes more efficient and customer-oriented.">Für den internationalen Wärmepumpenhersteller Stiebel Eltron habe ich eine digitale Plattform konzipiert, die Vertriebsprozesse effizienter und kundenorientierter gestaltet.</p>
             <div class="proj-detail-body">
-              <p data-en="Development of the test guide in close collaboration with the client, recruitment and coordination of test users, test facilitation and evaluation. Presentation of a concrete package of measures with prioritised improvement recommendations to the project leads.">Entwicklung des Testleitfadens in enger Zusammenarbeit mit dem Kunden, Rekrutierung und Koordination von Testnutzern, Testleitung und Auswertung. Präsentation eines konkreten Massnahmenpakets mit priorisierten Verbesserungsempfehlungen an die Projektverantwortlichen.</p>
+              <p data-en="The app presents complex product information interactively and enables sales staff to advise customers in a targeted way. Technical data sheets can be sent electronically directly. The solution increases efficiency in the sales process, improves the customer experience and creates a scalable digital interface between the product portfolio and consulting practice.">Die App bereitet komplexe Produktinformationen interaktiv auf und ermöglicht Vertriebsmitarbeitenden, Kunden gezielt zu beraten. Technische Datenblätter können direkt elektronisch versendet werden. Die Lösung steigert die Effizienz im Verkaufsprozess, verbessert die Kundenerfahrung und schafft eine skalierbare digitale Schnittstelle zwischen Produktportfolio und Beratungspraxis.</p>
             </div>
             <div class="proj-detail-tags">
-              <span class="proj-tag">myclimate</span>
-              <span class="proj-tag">evux ag</span>
-              <span class="proj-tag">Usability Testing</span>
-              <span class="proj-tag" data-en="Test facilitation">Testleitung</span>
-              <span class="proj-tag" data-en="Recommendations">Handlungsempfehlungen</span>
-              <span class="proj-tag">2019</span>
+              <span class="proj-tag">Stiebel Eltron</span>
+              <span class="proj-tag">iPad App</span>
+              <span class="proj-tag" data-en="Digital Brochure">Digitale Broschüre</span>
+              <span class="proj-tag" data-en="Sales Tool">Verkaufstool</span>
+              <span class="proj-tag" data-en="Interactive">Interaktiv</span>
+              <span class="proj-tag" data-en="Heat Pump">Wärmepumpe</span>
+              <span class="proj-tag">UX</span>
+              <span class="proj-tag">2016</span>
             </div>
           </div>
         </div>
@@ -684,7 +767,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 06</div>
+            <div class="proj-detail-eyebrow">Projekt 08</div>
             <h2 class="proj-detail-title">St. Galler Kantonalbank –<br>Digitales Beratungstool</h2>
             <p class="proj-detail-lead" data-en="Vision development and regular usability testing for an interactive advisory tool — from individual use to cooperative use in client consultations.">Visionsentwicklung und regelmässiges Usability Testing für ein interaktives Beratungstool — von der Einzelnutzung zur kooperativen Nutzung im Kundengespräch.</p>
             <div class="proj-detail-body">
@@ -695,7 +778,7 @@
               <span class="proj-tag">evux ag</span>
               <span class="proj-tag">Usability Testing</span>
               <span class="proj-tag" data-en="Vision prototype">Visionsprototyp</span>
-              <span class="proj-tag" data-en="Management board">Geschäftsleitung</span>
+              <span class="proj-tag" data-en="C-Level presentation">C-Level Präsentation</span>
               <span class="proj-tag">2018</span>
             </div>
           </div>
@@ -703,26 +786,26 @@
       </div>
       <div class="proj-item reveal delay-2" style="grid-column:span 6;">
         <div class="proj-detail-card">
-          <img loading="lazy" src="img/projekt-04/slide-01.webp" class="proj-detail-img" alt="DKSH – Globaler Header & Newsportal" />
+          <img loading="lazy" src="img/projekt-03/slide-01.webp" class="proj-detail-img" alt="myclimate – Usability Testing" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 07</div>
-            <h2 class="proj-detail-title">DKSH –<br>Globaler Header &amp; Newsportal</h2>
-            <p class="proj-detail-lead" data-en="User-centred consulting for the global website renewal — navigating fundamentally different user interests.">Nutzerzentrierte Beratung für die globale Website-Erneuerung — im Spannungsfeld fundamental unterschiedlicher Nutzerinteressen.</p>
+            <div class="proj-detail-eyebrow">Projekt 09</div>
+            <h2 class="proj-detail-title">Stiftung myclimate –<br>Usability Testing</h2>
+            <p class="proj-detail-lead" data-en="Overall professional responsibility for usability testing of the website — from conception to recommended actions.">Fachliche Gesamtverantwortung für das Usability-Testing der Website — von der Konzeption bis zur Massnahmenempfehlung.</p>
             <div class="proj-detail-body">
-              <p data-en="Expert review according to Nielsen/Norman as a starting point, followed by prioritisation of requirements from user and business perspectives. Development of an overall vision with global impact, further development of Contact &amp; Locations, and accompanying account management.">Expert Review nach Nielsen/Norman als Ausgangspunkt, gefolgt von der Priorisierung von Anforderungen aus Nutzer- und Businessperspektive. Entwicklung einer Gesamtvision mit globalem Impact, Weiterentwicklung von Contact &amp; Locations sowie begleitendes Account Management.</p>
+              <p data-en="Development of the test guide in close collaboration with the client, recruitment and coordination of test users, test facilitation and evaluation. Presentation of a concrete package of measures with prioritised improvement recommendations to the project leads.">Entwicklung des Testleitfadens in enger Zusammenarbeit mit dem Kunden, Rekrutierung und Koordination von Testnutzern, Testleitung und Auswertung. Präsentation eines konkreten Massnahmenpakets mit priorisierten Verbesserungsempfehlungen an die Projektverantwortlichen.</p>
             </div>
             <div class="proj-detail-tags">
-              <span class="proj-tag">DKSH</span>
+              <span class="proj-tag">myclimate</span>
               <span class="proj-tag">evux ag</span>
-              <span class="proj-tag">Expert Review</span>
-              <span class="proj-tag" data-en="UX consulting">UX-Beratung</span>
-              <span class="proj-tag" data-en="Requirements management">Anforderungsmanagement</span>
-              <span class="proj-tag">2018–2019</span>
+              <span class="proj-tag">Usability Testing</span>
+              <span class="proj-tag" data-en="Test facilitation">Testleitung</span>
+              <span class="proj-tag" data-en="Recommendations">Handlungsempfehlungen</span>
+              <span class="proj-tag">2019</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="proj-item reveal delay-1" style="grid-column:span 4;">
+      <div class="proj-item reveal delay-2" style="grid-column:span 6;">
         <div class="proj-detail-card">
           <div class="proj-slider">
             <div id="svgwTrack" class="proj-slider-track">
@@ -737,11 +820,11 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 08</div>
+            <div class="proj-detail-eyebrow">Projekt 10</div>
             <h2 class="proj-detail-title">SVGW –<br>Digitale Neuausrichtung</h2>
             <p class="proj-detail-lead" data-en="Complete rebuild of the digital world of the Swiss Gas and Water Industry Association.">Vollständiger Neuaufbau der digitalen Welt des Schweizerischen Verbands der Gas- und Wasserwirtschaft.</p>
             <div class="proj-detail-body">
-              <p data-en="From vision workshop and persona development through the outline concept to a user-tested prototype — guidelines for implementation presented to the management board.">Von Visionsworkshop und Persona-Entwicklung über das Grobkonzept bis zum nutzertesteten Prototyp — Leitplanken für die Implementierung an Geschäftsleitung präsentiert.</p>
+              <p data-en="From vision workshop and persona development through the outline concept to a user-tested prototype — guidelines for implementation presented to the management board.">Von Visionsworkshop und Persona-Entwicklung über das Grobkonzept bis zum nutzer-getesteten Prototyp — Leitplanken für die Implementierung an Geschäftsleitung präsentiert.</p>
             </div>
             <div class="proj-detail-tags">
               <span class="proj-tag">SVGW</span>
@@ -754,43 +837,46 @@
           </div>
         </div>
       </div>
-      <div class="proj-item reveal delay-2" style="grid-column:span 8;">
+      <div class="proj-item reveal delay-1" style="grid-column:span 6;">
         <div class="proj-detail-card">
-          <img loading="lazy" src="img/projekt-07/slide-01.webp" class="proj-detail-img" alt="Stiebel Eltron Messe" />
+          <img loading="lazy" src="img/projekt-04/slide-01.webp" class="proj-detail-img" alt="DKSH – Globaler Header & Newsportal" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 09</div>
-            <h2 class="proj-detail-title">Weitere UX-Projekte</h2>
-            <p class="proj-detail-lead" data-en="UX conception, prototyping and agile project support for Manpower, Lionstep, Revoca, Swisscom Health and Stiebel Eltron Switzerland.">UX-Konzeption, Prototyping und agile Projektbegleitung für Manpower, Lionstep, Revoca, Swisscom Health und Stiebel Eltron Schweiz.</p>
+            <div class="proj-detail-eyebrow">Projekt 11</div>
+            <h2 class="proj-detail-title">DKSH –<br>Globaler Header &amp; Newsportal</h2>
+            <p class="proj-detail-lead" data-en="User-centred consulting for the global website renewal — navigating fundamentally different user interests.">Nutzerzentrierte Beratung für die globale Website-Erneuerung — im Spannungsfeld fundamental unterschiedlicher Nutzerinteressen.</p>
             <div class="proj-detail-body">
-              <p data-en="Search filter concept for Manpower, MVP development for Lionstep, screen design for Revoca, and multi-year further development of the electronic patient record Evita (Swisscom Health). For Stiebel Eltron Switzerland: consulting, conception and realisation of an interactive touch installation for the trade fair presence — user guidance and interaction logic for a stationary touch terminal for product presentation at the point of interest.">Suchfilter-Konzept für Manpower, MVP-Entwicklung für Lionstep, Screendesign für Revoca sowie mehrjährige Weiterentwicklung des elektronischen Patientendossiers Evita (Swisscom Health). Für Stiebel Eltron Schweiz: Beratung, Konzeption und Realisation einer interaktiven Touch-Installation für den Messeauftritt — Nutzerführung und Interaktionslogik für ein stationäres Touch-Terminal zur Produktpräsentation am Point of Interest.</p>
+              <p data-en="Expert review according to Nielsen/Norman as a starting point, followed by prioritisation of requirements from user and business perspectives. Development of an overall vision with global impact, further development of Contact &amp; Locations, and accompanying account management.">Expert Review nach Nielsen/Norman als Ausgangspunkt, gefolgt von der Priorisierung von Anforderungen aus Nutzer- und Businessperspektive. Entwicklung einer Gesamtvision mit globalem Impact, Weiterentwicklung von Contact &amp; Locations sowie begleitendes Account Management.</p>
             </div>
             <div class="proj-detail-tags">
-              <span class="proj-tag">Manpower</span>
-              <span class="proj-tag">Lionstep</span>
-              <span class="proj-tag">Revoca</span>
-              <span class="proj-tag">Swisscom Health</span>
-              <span class="proj-tag">Stiebel Eltron</span>
-              <span class="proj-tag" data-en="Touch installation">Touch-Installation</span>
-              <span class="proj-tag" data-en="Trade fair">Messe</span>
-              <span class="proj-tag">2015–2018</span>
+              <span class="proj-tag">DKSH</span>
+              <span class="proj-tag">evux ag</span>
+              <span class="proj-tag">Expert Review</span>
+              <span class="proj-tag" data-en="UX consulting">UX-Beratung</span>
+              <span class="proj-tag" data-en="Requirements management">Anforderungsmanagement</span>
+              <span class="proj-tag" data-en="Architecture concept">Architekturkonzept</span>
+              <span class="proj-tag">Workshops</span>
+              <span class="proj-tag">Wireframes</span>
+              <span class="proj-tag" data-en="Implementation support">Umsetzungsbegleitung</span>
+              <span class="proj-tag">2018–2019</span>
             </div>
           </div>
         </div>
       </div>
 
+
   </div>
-  </div><!-- /.page-wrap -->
-  <footer>
+  </main><!-- /.page-wrap -->
+  <footer role="contentinfo">
     <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcello</span></div></div>
     <div class="footer-grid">
       <div class="footer-col"><div class="footer-col-label" data-en="Legal">Rechtliches</div><a href="impressum.html" data-en="Legal Notice &amp; Privacy">Impressum &amp; Datenschutz</a></div>
       <div class="footer-col"><div class="footer-col-label" data-en="Network">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
       <div class="footer-col"><div class="footer-col-label" data-en="Contact">Kontakt</div><a href="mailto:hallo@marcelrupf.com">hallo@marcelrupf.com</a></div>
-      <div class="footer-col"><div class="footer-col-label">&nbsp;</div><span style="color:rgba(255,255,255,0.35)">©2026 Marcel Rupf</span></div>
+      <div class="footer-col"></div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">Experience & AI Strategy Leader · Zürich · <span id="footer-time" style="font-variant-numeric:tabular-nums;">--:--</span></span>
-      <span class="footer-tag" data-en="Available for new projects">Verfügbar für neue Projekte</span>
+      <span class="footer-copy">Experience &amp; AI Strategy Leader</span>
+      <span class="footer-copy">Zürich · <span id="footer-time" style="font-variant-numeric:tabular-nums;">--:--</span></span>
     </div>
   </footer>
   <a class="back-top" id="backTop" href="#" aria-label="Nach oben"><svg viewBox="0 0 16 16"><line x1="8" y1="13" x2="8" y2="3"/><polyline points="4,7 8,3 12,7"/></svg></a>
@@ -882,6 +968,7 @@
   (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('scTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('scDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.scSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.scSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('postTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('postDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.postSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.postSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('sgkbTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('sgkbDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.sgkbSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.sgkbSlideTo=function(i){cur=i;upd();};})();
+  (function(){var cur=0,tot=5;function upd(){var t=document.getElementById('stTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('stDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.stSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.stSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('svgwTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('svgwDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.svgwSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.svgwSlideTo=function(i){cur=i;upd();};})();
 </script>
     <script>

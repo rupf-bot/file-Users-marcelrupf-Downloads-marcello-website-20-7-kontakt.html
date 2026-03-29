@@ -3,27 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" as="image" href="img/kontakt/image-01.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23737FDF'/><text x='50' y='72' font-size='62' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'>M</text></svg>">
+  <meta name="theme-color" content="#737FDF">
+  <meta name="geo.region" content="CH-ZH">
+  <meta name="geo.placename" content="Zürich, Schweiz">
+  <meta name="geo.position" content="47.3769;8.5417">
+  <meta name="ICBM" content="47.3769, 8.5417">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <title>Kontakt – Marcel Rupf</title>
-  <meta name="description" content="Kontaktieren Sie Marcel Rupf für Projekte rund um Transformation und Produktentwicklung.">
+  <meta name="description" content="Kontakt zu Marcel Rupf – Experience & AI Strategy Leader in Zürich. Für Anfragen zu Projekten, Zusammenarbeit oder einem ersten Gespräch: hallo@marcelrupf.com">
   <link rel="canonical" href="https://marcelrupf.com/kontakt.html">
   <meta property="og:title" content="Kontakt – Marcel Rupf">
   <meta property="og:description" content="Kontaktieren Sie Marcel Rupf für Projekte rund um Transformation und Produktentwicklung.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_CH">
   <meta property="og:url" content="https://marcelrupf.com/kontakt.html">
-  <meta property="og:image" content="https://marcelrupf.com/img/index/image-01.webp">
+  <meta property="og:image" content="https://marcelrupf.com/img/kontakt/image-01.webp">
+  <meta property="og:image:alt" content="Kontakt – Marcel Rupf">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kontakt – Marcel Rupf">
   <meta name="twitter:description" content="Kontaktieren Sie Marcel Rupf für Projekte rund um Transformation und Produktentwicklung.">
-  <meta name="twitter:image" content="https://marcelrupf.com/img/index/image-01.webp">
+  <meta name="twitter:image" content="https://marcelrupf.com/img/kontakt/image-01.webp">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{--heading-font:"Instrument Sans",sans-serif;--accent:#737FDF;--accent-dark:#5B6CD1;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1);}
 
-    html{font-size:18px;scroll-behavior:smooth;}
+    html{font-size:18px;scroll-behavior:smooth;overflow-x:hidden;}
     /* ── Language Toggle ── */
     .nav-right{display:flex;align-items:center;gap:2rem;margin-left:auto;}
     .lang-toggle{background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.07em;text-transform:uppercase;padding:.26rem .65rem;color:inherit;display:flex;align-items:center;gap:.3rem;white-space:nowrap;opacity:.5;transition:opacity .25s;}
@@ -116,6 +124,7 @@
       }
       .nav-hamburger.open { color: #fff; }
       .site-nav.menu-open .nav-logo { color: #fff; }
+      .site-nav.menu-open .nav-left { position: relative; z-index: 500; }
       .site-nav.menu-open .nav-sub { color: rgba(255,255,255,0.45); }
       .nav-sub { display: none; }
     }
@@ -178,10 +187,12 @@
     .contact-actions { display:flex;flex-direction:column;gap:.75rem;margin-bottom:3rem; }
     .contact-btn { display:flex;align-items:center;gap:.75rem;padding:1rem 1.4rem;border-radius:.6rem;font-size:.9rem;font-weight:600;letter-spacing:-.01em;transition:background .25s,color .25s,border-color .25s;border:none;cursor:pointer; }
     .contact-btn svg { width:18px;height:18px;flex-shrink:0; }
-    .btn-primary { background:#fff;color:#131217; }
-    .btn-primary:hover { background:#e8d5ff; color:#131217; }
-    .btn-secondary, .btn-ghost { background:#fff;border:1px solid #fff;color:#131217; }
-    .btn-secondary:hover, .btn-ghost:hover { background:#e8d5ff; color:#131217; }
+    .btn-primary { background:#fff;color:var(--accent); }
+    .btn-primary:hover { background:#f0efff;color:var(--accent-dark); }
+    .btn-secondary { background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.5);color:#fff; }
+    .btn-secondary:hover { background:rgba(255,255,255,0.28);border-color:#fff; }
+    .btn-ghost { background:transparent;border:1px solid rgba(255,255,255,0.5);color:#fff; }
+    .btn-ghost:hover { background:rgba(255,255,255,0.15);border-color:#fff; }
 
     .topics-label { font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:.75rem; }
     .topics-list { display:flex;flex-wrap:wrap;gap:.4rem; }
@@ -269,23 +280,6 @@
       }
       .nav-links.open { display: flex; }
       .nav-links li { list-style: none; }
-      /* Home-Link "Marcello" oben im Overlay */
-      .nav-links .nav-home-item {
-        margin-bottom: 1rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        width: 100%;
-        text-align: center;
-      }
-      .nav-links .nav-home-item a {
-        font-size: 1.8rem !important;
-        font-weight: 600 !important;
-        color: #fff !important;
-        letter-spacing: -.02em !important;
-        -webkit-tap-highlight-color: transparent;
-      }
-      .nav-links .nav-home-item a:hover,
-      .nav-links .nav-home-item a.touched { color: var(--accent) !important; }
       /* Normale Nav-Links */
       .nav-links a {
         font-size: 1.5rem !important;
@@ -338,12 +332,23 @@
       footer { padding: 3rem 1.2rem 2rem; }
     }
 
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
   </style>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Marcel Rupf","url":"https://marcelrupf.com"}
+</script>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Marcel Rupf","jobTitle":"Experience & AI Strategy Leader","url":"https://marcelrupf.com","email":"hallo@marcelrupf.com","address":{"@type":"PostalAddress","addressLocality":"Zürich","addressRegion":"ZH","addressCountry":"CH"},"contactPoint":{"@type":"ContactPoint","contactType":"professional","email":"hallo@marcelrupf.com","availableLanguage":["German","English"]}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://marcelrupf.com/"},{"@type":"ListItem","position":2,"name":"Kontakt","item":"https://marcelrupf.com/kontakt.html"}]}
+</script>
 </head>
 <body>
   <div id="cursor"></div>
   <div class="progress-bar" id="progress"></div>
-      <nav class="site-nav" id="navbar">
+      <nav class="site-nav" role="navigation" aria-label="Hauptnavigation" id="navbar">
     <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Experience &amp; AI Strategy Leader</span></div>
     <div class="nav-right">
       <ul class="nav-links"><li><a href="projekte.html"><span data-en="Projects">Projekte</span></a></li><li><a href="ansatz.html"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html" class="active"><span data-en="Contact">Kontakt</span></a></li></ul>
@@ -355,7 +360,7 @@
   <div class="page-hero">
     <p class="page-eyebrow reveal" data-en="Contact">Kontakt</p>
     <h1 class="page-title reveal delay-1" data-en="Interested in a conversation?">Interessiert an einem Austausch?</h1>
-    <p class="page-sub reveal delay-2" data-en="I look forward to hearing from you!" data-de="Ich freue mich auf ein «Hallo» von dir!">Ich freue mich auf ein <em>«Hallo»</em> von dir!</p>
+    <p class="page-sub reveal delay-2" data-en="I look forward to a &quot;Hello&quot; from you!" data-de="Ich freue mich auf ein «Hallo» von dir!">Ich freue mich auf ein «Hallo» von dir!</p>
   </div>
 
   <div class="kontakt-photos">
@@ -369,11 +374,6 @@
     <div class="contact-layout">
 
       <div class="reveal-left">
-        <div class="contact-avail">
-          <span class="avail-dot"></span>
-          <span class="avail-text" data-en="Available for new mandates">Verfügbar für neue Mandate</span>
-        </div>
-
         <div class="contact-info-block">
           <div class="contact-info-label" data-en="Location">Standort</div>
           <div class="contact-info-value">Zürich, Schweiz</div>
@@ -429,17 +429,17 @@
   </div>
   </div>
 
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcello</span></div></div>
     <div class="footer-grid">
       <div class="footer-col"><div class="footer-col-label" data-en="Legal">Rechtliches</div><a href="impressum.html" data-en="Legal Notice &amp; Privacy">Impressum &amp; Datenschutz</a></div>
       <div class="footer-col"><div class="footer-col-label" data-en="Network">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
       <div class="footer-col"><div class="footer-col-label" data-en="Contact">Kontakt</div><a href="mailto:hallo@marcelrupf.com">hallo@marcelrupf.com</a></div>
-      <div class="footer-col"><div class="footer-col-label">&nbsp;</div><span style="color:rgba(255,255,255,0.35)">©2026 Marcel Rupf</span></div>
+      <div class="footer-col"></div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">Experience & AI Strategy Leader · Zürich · <span id="footer-time" style="font-variant-numeric:tabular-nums;">--:--</span></span>
-      <span class="footer-tag" data-en="Available for new projects">Verfügbar für neue Projekte</span>
+      <span class="footer-copy">Experience &amp; AI Strategy Leader</span>
+      <span class="footer-copy">Zürich · <span id="footer-time" style="font-variant-numeric:tabular-nums;">--:--</span></span>
     </div>
   </footer>
   <a class="back-top" id="backTop" href="#"><svg viewBox="0 0 16 16"><line x1="8" y1="13" x2="8" y2="3"/><polyline points="4,7 8,3 12,7"/></svg></a>
