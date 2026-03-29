@@ -486,8 +486,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
-    padding: 2rem 2.6rem 0;
-    margin-bottom: 0;
+    margin-top: 2rem;
   }
   .proj-filter-btn {
     font-family: 'Space Mono', monospace;
@@ -506,7 +505,6 @@
   .proj-filter-btn:hover { border-color: var(--accent); color: var(--accent); }
   .proj-filter-btn.active { background: var(--dark); border-color: var(--dark); color: #fff; }
   .proj-item[hidden] { display: none !important; }
-  @media (max-width: 540px) { .proj-filters { padding: 1.5rem 1.2rem 0; } }
 
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
   a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
@@ -534,15 +532,15 @@
     <p class="page-eyebrow reveal" data-en="Selected work">Ausgewählte Arbeit</p>
     <h1 class="page-title reveal delay-1" data-en="Projects">Projekte</h1>
     <p class="page-sub reveal delay-2" data-en="Transformation projects from diverse industries and contexts — from strategic conception to operational delivery. Project names shared on request.">Transformationsprojekte aus unterschiedlichen Branchen und Kontexten — von der strategischen Konzeption bis zur operativen Umsetzung. Projektnamen werden auf Anfrage geteilt.</p>
+    <div class="proj-filters reveal delay-2" role="group" aria-label="Projekte filtern">
+      <button class="proj-filter-btn active" data-cat="all" data-en="All projects">Alle Projekte</button>
+      <button class="proj-filter-btn" data-cat="ai-transformation">AI Transformation</button>
+      <button class="proj-filter-btn" data-cat="strategie" data-en="Strategy">Strategie</button>
+      <button class="proj-filter-btn" data-cat="produktentwicklung" data-en="Product Development">Produktentwicklung</button>
+      <button class="proj-filter-btn" data-cat="testing">Testing</button>
+    </div>
   </div>
   <div class="divider"></div>
-  <div class="proj-filters" role="group" aria-label="Projekte filtern">
-    <button class="proj-filter-btn active" data-cat="all" data-en="All projects">Alle Projekte</button>
-    <button class="proj-filter-btn" data-cat="ai-transformation">AI Transformation</button>
-    <button class="proj-filter-btn" data-cat="strategie" data-en="Strategy">Strategie</button>
-    <button class="proj-filter-btn" data-cat="produktentwicklung" data-en="Product Development">Produktentwicklung</button>
-    <button class="proj-filter-btn" data-cat="testing">Testing</button>
-  </div>
   <div class="proj-grid">
 <div class="proj-item reveal " data-filter="ai-transformation" style="grid-column:span 6;">
         <div class="proj-detail-card">
